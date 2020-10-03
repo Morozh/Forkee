@@ -1,0 +1,35 @@
+@import "vars"
+	
+*
+	box-sizing: border-box
+	&:before, &:after
+		box-sizing: border-box
+
+html, body
+	height: 100%
+
+body
+	background-color: $color-bisque
+	color: $color-white
+	font-family: 'Roboto', sans-serif
+    font-size: 16px
+    font-weight: 400
+	min-width: 320px
+	position: relative
+	line-height: 1.75
+	font-family: roboto-grid, sans-serif
+	overflow-x: hidden
+	opacity: 1
+
+.img-responsive
+	display: block
+	max-width: 100%
+	height: auto
+
+.text-center
+	text-align: center
+
+a
+	text-decoration: none
+	cursor: pointer
+	color: $color-white

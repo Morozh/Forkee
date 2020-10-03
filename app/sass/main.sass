@@ -1,0 +1,84 @@
+@import "fonts"
+@import "base"
+@import "vars"
+
+.site__header
+	position: absolute
+	z-index: 10
+	left: 0
+	right: 0
+	background-color: inherit
+
+.container 
+	max-width: 1200px
+	margin: 0 auto
+	padding: $base-padding
+
+/* Смена темы */
+
+.theme__switcher-btn
+	height: 20px
+	padding: 0 5px 0 5px
+
+.switch-theme
+	position: relative
+	display: inline-block
+	width: 44px;
+	height: 20px;
+	.slider-theme
+		position: absolute
+		cursor: pointer
+		top: 0
+		left: 0
+		right: 0
+		bottom: 0
+		background-color: #ccc
+		-webkit-transition: .4s
+		transition: .4s
+		&::before
+			position: absolute
+			content: ""
+			height: 12px
+			width: 12px
+			left: 4px
+			bottom: 4px
+			background-color: white
+			-webkit-transition: .4s
+			transition: .4s
+
+input:checked + .slider-theme
+	background-color: #2196F3
+
+input:focus + .slider-theme
+	box-shadow: 0 0 1px #2196F3
+
+input:checked + .slider-theme:before
+	-webkit-transform: translateX(26px)
+	-ms-transform: translateX(26px)
+	transform: translateX(26px)
+
+.slider-theme.round
+	border-radius: 24px
+	&::before
+		border-radius: 50%
+
+/* Слайдер */
+.slider__item
+	height: 100vh
+	background-repeat: no-repeat
+	background-size: cover
+	background-position: center
+
+/* Футер */
+.site__footer
+	color: $color-black
+	height: 64px
+	font-size: 16px
+	font-weight: lighter
+	line-height: 1.25
+	background-color: $color-bisque
+	padding: 24px 0 24px 0
+	.container__footer
+		max-width: 1200px
+		margin: 0 auto
+		padding: $base-padding
