@@ -4,7 +4,6 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <!-- CSS -->
-    <link rel="stylesheet" href="/libs/fancybox-master/dist/jquery.fancybox.min.css">
     <link rel="stylesheet" href="libs/slick/slick.css"/>
     <link rel="stylesheet" href="libs/slick/slick-theme.css"/>
     <link rel="stylesheet" href="css/normalize.css">
