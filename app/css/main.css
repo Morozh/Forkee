@@ -29,6 +29,7 @@ html, body {
   height: 100%; }
 
 body {
+  height: 100vh;
   background-color: #F3EBE9;
   color: #fff;
   font-family: "Roboto", sans-serif;
@@ -65,53 +66,8 @@ a {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 15px 0 15px; }
-
-/* Смена темы */
-.theme__switcher-btn {
-  height: 20px;
-  padding: 0 5px 0 5px; }
-
-.switch-theme {
-  position: relative;
-  display: inline-block;
-  width: 44px;
-  height: 20px; }
-  .switch-theme .slider-theme {
-    position: absolute;
-    cursor: pointer;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: #ccc;
-    -webkit-transition: .4s;
-    transition: .4s; }
-    .switch-theme .slider-theme::before {
-      position: absolute;
-      content: "";
-      height: 12px;
-      width: 12px;
-      left: 4px;
-      bottom: 4px;
-      background-color: white;
-      -webkit-transition: .4s;
-      transition: .4s; }
-
-input:checked + .slider-theme {
-  background-color: #2196F3; }
-
-input:focus + .slider-theme {
-  box-shadow: 0 0 1px #2196F3; }
-
-input:checked + .slider-theme:before {
-  -webkit-transform: translateX(26px);
-  -ms-transform: translateX(26px);
-  transform: translateX(26px); }
-
-.slider-theme.round {
-  border-radius: 24px; }
-  .slider-theme.round::before {
-    border-radius: 50%; }
+  .container h1 {
+    color: #000; }
 
 /* Слайдер */
 .slider__item {
@@ -121,15 +77,16 @@ input:checked + .slider-theme:before {
   background-position: center; }
 
 /* Футер */
-.site__footer {
+.footer {
+  width: 100%;
+  margin: 0 auto;
   color: #000;
+  text-align: center;
   height: 64px;
   font-size: 16px;
   font-weight: lighter;
   line-height: 1.25;
   background-color: #F3EBE9;
-  padding: 24px 0 24px 0; }
-  .site__footer .container__footer {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 15px 0 15px; }
+  padding: 24px 0 24px 0;
+  position: absolute;
+  bottom: 0; }
