@@ -66,6 +66,7 @@ input:focus {
   .page-wrap .container {
     max-width: 1980px;
     margin: 0 auto;
+    height: 100%;
     padding: 0 15px 0 15px; }
   .page-wrap .header {
     width: 100%;
@@ -137,7 +138,7 @@ input:focus {
         opacity: 0.4; }
     .page-wrap .header .content-search {
       position: absolute;
-      bottom: -70%;
+      bottom: 10%;
       width: 100%;
       margin: 0 auto;
       height: 90px;
