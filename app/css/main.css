@@ -110,7 +110,8 @@ input:focus {
           transition: all 0.2s ease-in; }
           .page-wrap .header .nav__buttons .btn:hover {
             color: #fff;
-            background-color: #00C1DA; }
+            background-color: #00C1DA;
+            box-shadow: 0 0 100px 5px rgba(0, 193, 218, 0.36); }
         .page-wrap .header .nav__buttons .black {
           color: #000;
           border: none;
@@ -141,7 +142,7 @@ input:focus {
       display: flex;
       justify-content: space-between;
       align-items: center;
-      bottom: 15%;
+      bottom: 10%;
       width: 100%;
       margin: 0 auto;
       background-color: transparent; }
@@ -170,7 +171,7 @@ input:focus {
         color: #fff;
         border: none;
         padding: 10px 10px;
-        transition: all 0.2s ease-in; }
+        transition: all 0.4s ease-in; }
         .page-wrap .header .content-seach-input .btn:hover {
           box-shadow: 0 0 100px 5px rgba(0, 193, 218, 0.36); }
   .page-wrap .footer {
