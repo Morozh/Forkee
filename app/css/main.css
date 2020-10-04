@@ -1,4 +1,3 @@
-@charset "UTF-8";
 @font-face {
   font-family: 'roboto-grid';
   src: url("../fonts/Roboto-Regular.ttf") format("ttf"); }
@@ -29,9 +28,7 @@ html, body {
   height: 100%; }
 
 body {
-  height: 100vh;
-  background-color: #F3EBE9;
-  color: #fff;
+  color: #000;
   font-family: "Roboto", sans-serif;
     font-family-font-size: 16px;
     font-family-font-weight: 400;
@@ -55,38 +52,96 @@ a {
   cursor: pointer;
   color: #fff; }
 
-.site__header {
-  position: absolute;
-  z-index: 10;
-  left: 0;
-  right: 0;
-  background-color: inherit; }
+input:focus {
+  outline: none; }
 
-.container {
-  max-width: 1200px;
+.page-wrap {
+  display: flex;
+  flex-direction: column;
+  max-width: 1980px;
+  height: 100%;
   margin: 0 auto;
-  padding: 0 15px 0 15px; }
-  .container h1 {
-    color: #000; }
-
-/* Слайдер */
-.slider__item {
-  height: 100vh;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center; }
-
-/* Футер */
-.footer {
-  width: 100%;
-  margin: 0 auto;
-  color: #000;
-  text-align: center;
-  height: 64px;
-  font-size: 16px;
-  font-weight: lighter;
-  line-height: 1.25;
-  background-color: #F3EBE9;
-  padding: 24px 0 24px 0;
-  position: absolute;
-  bottom: 0; }
+  position: relative;
+  /* Header */ }
+  .page-wrap .container {
+    max-width: 1980px;
+    margin: 0 auto;
+    padding: 0 15px 0 15px; }
+  .page-wrap .header {
+    width: 100%;
+    height: 70vh;
+    position: relative;
+    background-image: url(../img/main-bg.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    z-index: 999; }
+    .page-wrap .header::after {
+      content: '';
+      z-index: -1;
+      position: absolute;
+      width: 466px;
+      height: 466px;
+      left: -100px;
+      top: -270px;
+      background-color: #00C1DA;
+      border-radius: 50%; }
+    .page-wrap .header .nav {
+      padding: 40px 65px 0 45px;
+      display: flex;
+      justify-content: space-between; }
+      .page-wrap .header .nav__buttons {
+        display: flex; }
+        .page-wrap .header .nav__buttons .btn {
+          text-transform: uppercase;
+          font-size: 14px;
+          width: 180px;
+          height: 60px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          cursor: pointer;
+          border-radius: 36px;
+          background-color: transparent;
+          color: #00C1DA;
+          border: 2px solid #00C1DA;
+          padding: 10px 10px;
+          transition: all 0.2s ease-in; }
+          .page-wrap .header .nav__buttons .btn:hover {
+            color: #fff;
+            background-color: #00C1DA; }
+        .page-wrap .header .nav__buttons .black {
+          color: #000;
+          border: none;
+          padding-right: 40px; }
+          .page-wrap .header .nav__buttons .black:hover {
+            color: #00C1DA;
+            background-color: transparent; }
+    .page-wrap .header .content {
+      width: 100%;
+      height: 100%;
+      padding: 120px 100px;
+      max-width: 1260px;
+      margin: 0 auto; }
+      .page-wrap .header .content .content-title {
+        font-size: 54px;
+        line-height: 60px;
+        font-weight: normal;
+        color: #1E2D52;
+        margin: 0; }
+      .page-wrap .header .content .content-subtitle {
+        margin: 0;
+        font-size: 28px;
+        color: #3C3C3C;
+        opacity: 0.4; }
+  .page-wrap .footer {
+    position: absolute;
+    bottom: 0;
+    font-size: 18px;
+    font-weight: normal;
+    padding: 20px 0;
+    width: 100%;
+    height: 80px; }
+    .page-wrap .footer .footer-copy {
+      text-align: center;
+      color: #3C3C3C; }

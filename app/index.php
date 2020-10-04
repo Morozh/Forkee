@@ -20,29 +20,44 @@
   </head>
   <body>
 
-    <!-- Header -->
-    <header class="header">
-      <div class="container">
-        <h1>Hello world!</h1>
-      </div>
-    </header>
-    <!-- Find Section -->
-    <section class="section">
-      <div class="container">
-        <h2>Hello world!</h2>
-      </div>
-    </section>
+    <!-- Page Wrap -->
+    <main class="page-wrap">
 
-    <!-- Footer -->
-    <footer class="footer">
-      <div class="container">
-        &#169;&nbsp;Trio
-      </div>
-    </footer>
+      <!-- Header -->
+      <header class="header">
+        <div class="container">
+          <nav class="nav">
+            <div class="nav__logo"><img class="img-responsive" src="../app/img/main-logo.png" alt=""/></div>
+            <div class="nav__buttons">
+              <input class="btn black" type="button" value="sign in">
+              <input class="btn" type="button" value="sign up" onlick="openModal()">
+            </div>
+          </nav>
+          <div class="content">
+            <h1 class="content-title">
+              ANYTHING YOU NEED, <br />
+              WE’VE GOT YOU COVERED.
+            </h1>
+            <h2 class="content-subtitle">
+              classified advertissements website
+            </h2>
+          </div>
+        </div>
+      </header>
+
+      <footer class="footer">
+        <div class="container">
+          <div class="footer-copy">
+            &#169&nbsp;Forkee studio
+          </div>
+        </div>
+      </footer>
+
+    </main>
 
     <!-- JavaScript -->
-    <script src="libs/jquery-3.5.1.min.js"></script>
-    <script src="libs/slick/slick.min.js"></script>
-    <script src="js/script.js"></script>
+    <script src="../app/libs/jquery-3.5.1.min.js"></script>
+    <script src="../app/libs/slick/slick.min.js"></script>
+    <script src="../app/js/script.js"></script>
   </body>
 </html>
