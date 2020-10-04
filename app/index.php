@@ -12,10 +12,10 @@
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/main.css">
 
-    <meta name="description" content="FV">
+    <meta name="description" content="Forkee">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-    <title>Find Vacancy</title>
+    <title>Forkee</title>
 
   </head>
   <body>
@@ -43,7 +43,16 @@
             </h2>
             <div class="content-seach-input">
               <div class="content-search">
-                
+                <div class="search-select">
+                  <select>
+                    <option>CITY</option>
+                    <option>Москва</option>
+                    <option>Екатеринбург</option>
+                  </select>
+                </div>
+                <div class="search-input">
+                  <input class="search" type="search" placeholder="FIND VACANCY" />
+                </div>
               </div>
               <input class="btn" type="button" value="search"  />
             </div>
