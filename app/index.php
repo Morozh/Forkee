@@ -45,6 +45,7 @@
         </div>
       </header>
 
+      <!-- Footer -->
       <footer class="footer">
         <div class="container">
           <div class="footer-copy">
