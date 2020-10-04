@@ -29,8 +29,8 @@
           <nav class="nav">
             <div class="nav__logo"><img class="img-responsive" src="../app/img/main-logo.png" alt=""/></div>
             <div class="nav__buttons">
-              <input class="btn black" type="button" value="sign in">
-              <input class="btn" type="button" value="sign up" onlick="openModal()">
+              <input class="btn black" type="button" value="sign in" />
+              <input class="btn" type="button" value="sign up" onlick="openModal()" />
             </div>
           </nav>
           <div class="content">
@@ -41,6 +41,9 @@
             <h2 class="content-subtitle">
               classified advertissements website
             </h2>
+            <div class="content-search">
+              <input class="btn sp" type="button" value="search"  />
+            </div>
           </div>
         </div>
       </header>
