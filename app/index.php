@@ -41,8 +41,11 @@
             <h2 class="content-subtitle">
               classified advertissements website
             </h2>
-            <div class="content-search">
-              <input class="btn sp" type="button" value="search"  />
+            <div class="content-seach-input">
+              <div class="content-search">
+                
+              </div>
+              <input class="btn" type="button" value="search"  />
             </div>
           </div>
         </div>
