@@ -50,9 +50,9 @@
                     <option>Екатеринбург</option>
                   </select>
                 </div>
-                <div class="search-input">
-                  <input class="search" type="search" placeholder="FIND VACANCY" />
-                </div>
+               <form method = "POST" action = "/chat">
+                  <input class="search" type="text" name="text"  placeholder="FIND VACANCY" />
+                </form>
               </div>
               <input class="btn" type="button" value="search"  />
             </div>
