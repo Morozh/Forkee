@@ -9,150 +9,112 @@
 	height: 100%
 	margin: 0 auto
 	position: relative
-	.container 
-		max-width: 1980px
-		margin: 0 auto
-		height: 100%
-		padding: $base-padding
-	/* Header */
-	.header
-		width: 100%
-		height: 70vh
-		position: relative
-		background-image: url(../img/main-bg.png)
-		background-repeat: no-repeat
-		background-size: cover
-		background-position: center
-		z-index: 999
-		&::after
-			content: ''
-			z-index: -1
-			position: absolute
-			width: 466px
-			height: 466px
-			left: -100px
-			top: -270px
-			background-color: $color-ocean-blue
-			border-radius: 50%
-		.nav
-			padding: 40px 65px 0 45px
+
+.container 
+	max-width: 1200px
+	margin: 0 auto
+	height: 100%
+	padding: $base-padding
+
+/* Header */
+.header
+	width: 100%
+	height: 100vh
+	position: relative
+	background-image: url(../img/main-bg.png)
+	background-repeat: no-repeat
+	background-size: cover
+	background-position: center -60px
+	.header-nav
+		height: 94px
+		background-color: $color-white
+	.nav
+		display: flex
+		justify-content: space-between
+		align-items: center
+		padding: 25px 0px
+		&__menu
 			display: flex
-			justify-content: space-between
-			&__buttons
-				display: flex
-				.btn
-					text-transform: uppercase
-					font-size: 14px
-					width: 180px
-					height: 60px
-					display: flex
-					align-items: center
-					justify-content: center
-					cursor: pointer
-					border-radius: 36px
-					background-color: transparent
-					color: $color-ocean-blue
-					border: 2px solid $color-ocean-blue
-					padding: 10px 10px
-					transition: all 0.2s ease-in
-					&:hover
-						color: $color-white
-						background-color: $color-ocean-blue
-						box-shadow: 0 0 100px 5px rgba(0, 193, 218, 0.36)
-				.black
-					color: $color-black
-					border: none
-					padding-right: 40px
-					&:hover
-						color: $color-ocean-blue
-						background-color: transparent
-						box-shadow: none
-		.content
-			width: 100%
-			height: 100%
-			padding-top: 20vh
-			max-width: 1260px
-			margin: 0 auto
-			position: relative
-			.content-title
-				font-size: 5rem
-				line-height: 5.5rem
-				font-weight: normal
-				color: #1E2D52
-				margin: 0
-			.content-subtitle
-				margin: 0
-				font-size: 28px
-				color: $color-gray
-				opacity: 0.4
-		.content-seach-input
-			position: absolute
-			display: flex
-			justify-content: space-between
-			align-items: center
-			bottom: 10%
-			width: 100%
-			margin: 0 auto
-			background-color: transparent
-			.content-search
+			.menu
+				list-style-type: none
 				display: flex
 				align-items: center
-				width: 100%
-				height: 70px
-				padding: 5px
-				border-radius: 8px
-				background-color: $color-white
-				margin-right: 15px
-				box-shadow: 0 0 100px 5px rgba(50, 60, 90, 0.2)
-				.search-select
-					display: flex
-					flex-basis: 20%
-					position: relative
-					height: 100%
-					&::before
-						content: ''
-						position: absolute
-						width: 1px
-						height: 100%
-						padding: 1px 0
-						background-color: rgba(151, 151, 151, 0.2)
-						right: 0
-				.search-input
-					display: flex
-					flex-basis: 80%
-					.search
-						width: 100%
-						height: 100%
-						border: 0
-						font-size: 19px
-						color: #1E2D52
-						margin-left: 35px
-						margin-right: 20px
+				margin: 0
+				padding: 0
+				.menu-item
+					font-size: 12px
+					font-weight: 700
+					margin: 0px 17px
+					padding: 0 5px
+					border-bottom: 2px solid transparent
+					cursor: pointer
+					transition: all 0.2s ease-in
+					&:hover
+						border-bottom: 2px solid $color-ocean-blue
+					&:last-child
+						margin-right: 40px
 			.btn
-				text-transform: uppercase
-				font-size: 14px
-				width: 190px
-				height: 70px
 				display: flex
+				text-transform: uppercase
+				width: 110px
+				height: 30px
+				font-size: 12px
+				font-weight: 700
 				align-items: center
 				justify-content: center
 				cursor: pointer
-				border-radius: 10px
-				background-color: $color-ocean-blue
-				color: $color-white
-				border: none
-				padding: 10px 10px
-				transition: all 0.4s ease-in
+				border-radius: 16px
+				background-color: transparent
+				color: $color-ocean-blue
+				border: 1px solid $color-ocean-blue
+				padding: 5px
+				transition: all 0.2s ease-in
 				&:hover
-					box-shadow: 0 0 100px 5px rgba(0, 193, 218, 0.36)
-	.footer
-		position: absolute
-		bottom: 0
-		font-size: 18px
-		font-weight: normal
-		padding: 20px 0
+					color: $color-white
+					background-color: $color-ocean-blue
+					box-shadow: 0 0 50px 5px rgba(0, 193, 218, 0.36)
+
+/* Search Input */
+.content-seach-input
+	position: absolute
+	display: flex
+	justify-content: space-between
+	align-items: center
+	bottom: 10%
+	width: 100%
+	margin: 0 auto
+	background-color: transparent
+	.content-search
+		display: flex
+		align-items: center
 		width: 100%
-		height: 80px
-		.footer-copy
-			text-align: center
-			color: $color-gray
+		height: 70px
+		padding: 5px
+		border-radius: 8px
+		background-color: $color-white
+		margin-right: 15px
+		box-shadow: 0 0 100px 5px rgba(50, 60, 90, 0.2)
+		.search-select
+			display: flex
+			flex-basis: 20%
+			position: relative
+			height: 100%
+			&::before
+				content: ''
+				position: absolute
+				width: 1px
+				height: 100%
+				padding: 1px 0
+				background-color: rgba(151, 151, 151, 0.2)
+				right: 0
+		.search-input
+			display: flex
+			flex-basis: 80%
+			.search
+				width: 100%
+				height: 100%
+				border: 0
+				font-size: 19px
+				color: #1E2D52
+				margin-left: 35px
+				margin-right: 20px
