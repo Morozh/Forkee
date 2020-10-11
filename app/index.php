@@ -34,6 +34,7 @@
               <ul class="menu">
                 <li class="menu-item"><a href="#">HOME</a></li>
                 <li class="menu-item"><a href="#about-us">ABOUT US</a></li>
+                <li class="menu-item"><a href="#expertise">EXPERTISE</a></li>
                 <li class="menu-item"><a href="#our-team">OUR TEAM</a></li>
                 <li class="menu-item"><a href="#contact">CONTACT</a></li>
               </ul>
@@ -87,16 +88,66 @@
     </section>
 
     <!-- Section Our Expertise -->
-    <section class="section">
+    <section id="expertise" class="section">
       <div class="container">
         <div class="section-info-team">
           <div class="section__title">
             Our Expertise
           </div>
+          <div class="info-team">
+            <div class="info-team__percent">
+              <div class="percent-item">
+                <span class="item-title">VACANCY</span>
+                <span class="item-percent">90%</span>
+              </div>
+              <div class="percent-item">
+                <span class="item-title">DESIGN</span>
+                <span class="item-percent">80%</span>
+              </div>
+              <div class="percent-item">
+                <span class="item-title">DEVELOPMENT</span>
+                <span class="item-percent">85%</span>
+              </div>
+            </div>
+            <div class="info-team__text">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium commodi totam culpa, dolorum asperiores iusto<br /> 
+              quidem, nesciunt hic eaque blanditiis enim, id maiores nam nobis dignissimos aliquam ad minus nisi.<br />
+              <br />
+              Autem laborum sint tenetur, earum facere veniam? Sunt fugiat veniam consectetur soluta quia ex tempora quaerat,<br /> 
+              perferendis! Itaque a praesentium saepe ex distinctio aliquid quis.
+            </div>
+          </div>
+          <div class="info-team-services">
+            <div class="service">
+              <div class="service-title">VACANCY</div>
+              <div class="service-text">Lorem Ipsum Proin gravida nibh vel<br />
+                velit auctor aliquet. Aenean sollicitudin, lorem<br />
+                quis bibendum auctor, nisi elit consequat<br />
+                ipsum.
+              </div>
+            </div>
+            <div class="service">
+              <div class="service-title">WEB DEVELOPMENT</div>
+              <div class="service-text">Lorem Ipsum Proin gravida nibh vel<br />
+                velit auctor aliquet. Aenean sollicitudin, lorem<br />
+                quis bibendum auctor, nisi elit consequat<br />
+                ipsum.
+              </div>
+            </div>
+            <div class="service">
+              <div class="service-title">GRAPHIC DESIGN</div>
+              <div class="service-text">Lorem Ipsum Proin gravida nibh vel<br />
+                velit auctor aliquet. Aenean sollicitudin, lorem<br />
+                quis bibendum auctor, nisi elit consequat<br />
+                ipsum.
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
 
+    <!-- Footer -->
     <footer id="contact" class="footer">
       <div class="container">
         <div class="footer-info">
@@ -125,10 +176,11 @@
       </div>
     </footer>
 
+    <!-- Footer Copy -->
     <div class="copy">
       <div class="container">
         <span class="copy-text">
-          @2020 Forkee theme
+          © 2020 Forkee theme
         </span>
       </div>
     </div>
