@@ -147,6 +147,34 @@
       </div>
     </section>
 
+    <!-- Section Our Team -->
+    <section id="our-team" class="section">
+      <div class="container">
+        <div class="section-info-team">
+          <div class="section__title">
+            Our Team
+          </div>
+          <div class="section-team-box">
+            <div class="team-box">
+              <img src="../app/img/our-team-akop.png" alt="Photo" />
+              <span class="team-box__title">RUSLAN AKOPYAN</span>
+              <span class="team-box__subtitle">Designer & Developer</span>
+            </div>
+            <div class="team-box">
+              <img src="../app/img/our-team-bar.png" alt="Photo" />
+              <span class="team-box__title">DANIL BARABOSHKIN</span>
+              <span class="team-box__subtitle">Analytics</span>
+            </div>
+            <div class="team-box">
+              <img src="../app/img/our-team-pas.png" alt="Photo" />
+              <span class="team-box__title">DANIIL PASTOROV</span>
+              <span class="team-box__subtitle">Testing</span>
+            </div>
+          <div>
+        </div>
+      </div>
+    </section>
+
     <!-- Footer -->
     <footer id="contact" class="footer">
       <div class="container">
