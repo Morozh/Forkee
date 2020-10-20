@@ -510,7 +510,7 @@ h1, h2, h3 {
     flex-direction: column;
     top: calc(50% - 30vh);
     left: calc(50% - 300px);
-    padding: 20px;
+    padding: 30px;
     width: 600px;
     background: #fff;
     border: 1px solid #00C1DA;
@@ -532,12 +532,12 @@ h1, h2, h3 {
       color: #00C1DA; }
     .popup-fade .popup .row {
       display: flex;
-      justify-content: center;
       align-items: center;
       margin: 5px; }
       .popup-fade .popup .row .form-input {
         width: 50%;
         padding: 15px;
+        height: 40px;
         margin: 10px;
         border: 1px solid #00C1DA;
         border-radius: 16px;
@@ -549,3 +549,24 @@ h1, h2, h3 {
         width: 100%; }
       .popup-fade .popup .row .form-copy {
         margin: 5px; }
+      .popup-fade .popup .row .btn {
+        display: flex;
+        text-transform: uppercase;
+        width: 130px;
+        height: 40px;
+        margin: 10px;
+        font-size: 16px;
+        font-weight: 700;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        border-radius: 16px;
+        background-color: transparent;
+        color: #00C1DA;
+        border: 1px solid #00C1DA;
+        padding: 5px;
+        transition: all 0.2s ease-in; }
+        .popup-fade .popup .row .btn:hover {
+          color: #fff;
+          background-color: #00C1DA;
+          box-shadow: 0 0 50px 5px rgba(0, 193, 218, 0.36); }
