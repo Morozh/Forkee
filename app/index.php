@@ -38,7 +38,7 @@
                 <li class="menu-item"><a href="#our-team">OUR TEAM</a></li>
                 <li class="menu-item"><a href="#contact">CONTACT</a></li>
               </ul>
-              <input class="btn" type="button" value="sign up" onlick="openModal()" />
+              <input class="btn popup-reg-open" type="button" value="sign up" />
             </div>
           </nav>
         </div>
@@ -211,6 +211,30 @@
           © 2020 Forkee theme
         </span>
       </div>
+    </div>
+
+    <!-- Modals -->
+    <div class="popup-fade">
+      <form class="popup" action="" method="post">
+        <a class="popup-close" href="#">&times;</a>
+        <h2 class="form-title">Forkee</h2>
+        <div class="row">
+          <input class="form-input" type="text" placeholder="First name" />
+          <input class="form-input" type="text" placeholder="Last name" />
+        </div>
+        <div class="row">
+          <input class="form-input" type="text" placeholder="Email" />
+        </div>
+        <div class="row">
+          <input class="form-input" type="text" placeholder="Password" />
+        </div>
+        <div class="row">
+          <input class="form-input" type="text" placeholder="Confirm Password" />
+        </div>
+        <div class="row">
+          <input type="submit" class="btn" value="Sign Up" />
+        </div>
+      </form>		
     </div>
 
   </main>

@@ -491,3 +491,51 @@ h1, h2, h3 {
   color: #fff;
   line-height: 16px;
   background-color: #2A2C2B; }
+
+.popup-fade {
+  display: none; }
+  .popup-fade::before {
+    content: '';
+    background: #000;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.8;
+    z-index: 9999; }
+  .popup-fade .popup {
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    top: calc(50% - 30vh);
+    left: calc(50% - 300px);
+    padding: 20px;
+    width: 600px;
+    background: #fff;
+    border: 1px solid #00C1DA;
+    border-radius: 2px;
+    z-index: 99999;
+    opacity: 1; }
+    .popup-fade .popup .form-title {
+      font-size: 24px;
+      font-weight: 300px;
+      color: #000;
+      text-align: center;
+      text-transform: uppercase;
+      letter-spacing: 0.5px; }
+    .popup-fade .popup .popup-close {
+      position: absolute;
+      top: -5px;
+      right: 15px;
+      font-size: 32px;
+      color: #00C1DA; }
+    .popup-fade .popup .row {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      margin: 5px; }
+      .popup-fade .popup .row .form-input {
+        padding: 10px;
+        margin: 10px; }
