@@ -534,8 +534,12 @@ h1, h2, h3 {
       display: flex;
       justify-content: center;
       align-items: center;
-      flex-wrap: wrap;
       margin: 5px; }
       .popup-fade .popup .row .form-input {
-        padding: 10px;
+        width: 50%;
+        padding: 5px;
         margin: 10px; }
+      .popup-fade .popup .row .full-w {
+        width: 100%; }
+      .popup-fade .popup .row .form-copy {
+        margin: 5px; }

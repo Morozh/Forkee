@@ -223,16 +223,17 @@
           <input class="form-input" type="text" placeholder="Last name" />
         </div>
         <div class="row">
-          <input class="form-input" type="text" placeholder="Email" />
+          <input class="form-input full-w" type="text" placeholder="Email" />
         </div>
         <div class="row">
-          <input class="form-input" type="text" placeholder="Password" />
+          <input class="form-input full-w" type="text" placeholder="Password" />
         </div>
         <div class="row">
-          <input class="form-input" type="text" placeholder="Confirm Password" />
+          <input class="form-input full-w" type="text" placeholder="Confirm Password" />
         </div>
         <div class="row">
           <input type="submit" class="btn" value="Sign Up" />
+          <span class="form-copy">Already registered?<a href="#"> Sign In</a></span>
         </div>
       </form>		
     </div>
