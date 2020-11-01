@@ -10,7 +10,6 @@ html, body
 
 body
 	color: $color-black
-	font-family: 'Roboto', sans-serif
     font-size: 16px
     font-weight: 400
 	min-width: 320px
@@ -31,12 +30,21 @@ body
 a
 	text-decoration: none
 	cursor: pointer
-	color: $color-white
 
 input:focus
 	outline: none
+
+input[type='search']::-webkit-search-decoration, 
+input[type='search']::-webkit-search-cancel-button, 
+input[type='search']::-webkit-search-results-button, 
+input[type='search']::-webkit-search-results-decoration
+  	display: none;
+
 
 ::-webkit-input-placeholder
    color: rgba(60, 60, 60, 0.4)
    &:focus
         color: $color-black
+
+h1, h2, h3
+	margin: 0

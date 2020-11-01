@@ -3,156 +3,548 @@
 @import "vars"
 
 .page-wrap
-	display: flex
-	flex-direction: column
 	max-width: 1980px
+	width: 100%
 	height: 100%
 	margin: 0 auto
-	position: relative
-	.container 
-		max-width: 1980px
-		margin: 0 auto
-		height: 100%
-		padding: $base-padding
-	/* Header */
-	.header
+
+.container 
+	max-width: 1200px
+	margin: 0 auto
+	padding: $base-padding
+
+.error
+	color: #ff4e4e
+	border: 1px solid #ff4e4e !important
+
+/* Header */
+.header
+	width: 100%
+	height: 100vh
+	background-image: url(../img/main-bg.png)
+	background-repeat: no-repeat
+	background-size: cover
+	background-position: center center
+	.header-nav
 		width: 100%
-		height: 70vh
-		position: relative
-		background-image: url(../img/main-bg.png)
-		background-repeat: no-repeat
-		background-size: cover
-		background-position: center
-		z-index: 999
-		&::after
-			content: ''
-			z-index: -1
-			position: absolute
-			width: 466px
-			height: 466px
-			left: -100px
-			top: -270px
-			background-color: $color-ocean-blue
-			border-radius: 50%
-		.nav
-			padding: 40px 65px 0 45px
+		position: fixed
+		z-index: 99
+		height: 94px
+		background-color: $color-white
+	.nav
+		display: flex
+		justify-content: space-between
+		align-items: center
+		padding: 25px 0px
+		&__menu
 			display: flex
-			justify-content: space-between
-			&__buttons
-				display: flex
-				.btn
-					text-transform: uppercase
-					font-size: 14px
-					width: 180px
-					height: 60px
-					display: flex
-					align-items: center
-					justify-content: center
-					cursor: pointer
-					border-radius: 36px
-					background-color: transparent
-					color: $color-ocean-blue
-					border: 2px solid $color-ocean-blue
-					padding: 10px 10px
-					transition: all 0.2s ease-in
-					&:hover
-						color: $color-white
-						background-color: $color-ocean-blue
-						box-shadow: 0 0 100px 5px rgba(0, 193, 218, 0.36)
-				.black
-					color: $color-black
-					border: none
-					padding-right: 40px
-					&:hover
-						color: $color-ocean-blue
-						background-color: transparent
-						box-shadow: none
-		.content
-			width: 100%
-			height: 100%
-			padding-top: 20vh
-			max-width: 1260px
-			margin: 0 auto
-			position: relative
-			.content-title
-				font-size: 5rem
-				line-height: 5.5rem
-				font-weight: normal
-				color: #1E2D52
-				margin: 0
-			.content-subtitle
-				margin: 0
-				font-size: 28px
-				color: $color-gray
-				opacity: 0.4
-		.content-seach-input
-			position: absolute
-			display: flex
-			justify-content: space-between
-			align-items: center
-			bottom: 10%
-			width: 100%
-			margin: 0 auto
-			background-color: transparent
-			.content-search
+			.menu
+				list-style-type: none
 				display: flex
 				align-items: center
-				width: 100%
-				height: 70px
-				padding: 5px
-				border-radius: 8px
-				background-color: $color-white
-				margin-right: 15px
-				box-shadow: 0 0 100px 5px rgba(50, 60, 90, 0.2)
-				.search-select
-					display: flex
-					flex-basis: 20%
-					position: relative
-					height: 100%
-					&::before
-						content: ''
-						position: absolute
-						width: 1px
-						height: 100%
-						padding: 1px 0
-						background-color: rgba(151, 151, 151, 0.2)
-						right: 0
-				.search-input
-					display: flex
-					flex-basis: 80%
-					.search
-						width: 100%
-						height: 100%
-						border: 0
-						font-size: 19px
-						color: #1E2D52
-						margin-left: 35px
-						margin-right: 20px
+				margin: 0
+				padding: 0
+				.menu-item
+					list-style-type: none
+					margin: 0px 17px
+					padding: 0 5px
+					border-bottom: 2px solid transparent
+					cursor: pointer
+					transition: all 0.2s ease-in
+					&:hover
+						border-bottom: 2px solid $color-ocean-blue
+					&:last-child
+						margin-right: 40px
+					a
+						color: $color-black
+						text-decoration: none
+						font-size: 12px
+						font-weight: 700
 			.btn
-				text-transform: uppercase
-				font-size: 14px
-				width: 190px
-				height: 70px
 				display: flex
+				text-transform: uppercase
+				width: 110px
+				height: 30px
+				font-size: 12px
+				font-weight: 700
 				align-items: center
 				justify-content: center
 				cursor: pointer
-				border-radius: 10px
-				background-color: $color-ocean-blue
-				color: $color-white
-				border: none
-				padding: 10px 10px
-				transition: all 0.4s ease-in
+				border-radius: 16px
+				background-color: transparent
+				color: $color-ocean-blue
+				border: 1px solid $color-ocean-blue
+				padding: 5px
+				transition: all 0.2s ease-in
 				&:hover
-					box-shadow: 0 0 100px 5px rgba(0, 193, 218, 0.36)
-	.footer
-		position: absolute
-		bottom: 0
-		font-size: 18px
-		font-weight: normal
-		padding: 20px 0
+					color: $color-white
+					background-color: $color-ocean-blue
+					box-shadow: 0 0 50px 5px rgba(0, 193, 218, 0.36)
+
+/* Search Input */
+.content
+	width: 100%
+	height: 100%
+	position: relative
+	display: flex
+	align-items: center
+	.content-title
+		font-size: 100px
+		line-height: 120px
+		font-weight: 700
+		color: $color-white
+		text-align: center
+	.content-subtitle
+		display: block
+		font-size: 16px
+		line-height: 20px
+		letter-spacing: 5px
+		color: $color-ocean-blue
+		text-align: center
+	.content-seach-input
+		display: flex
+		justify-content: space-between
+		align-items: center
+		max-width: 1120px
 		width: 100%
-		height: 80px
-		.footer-copy
+		margin-top: 35px
+		background-color: transparent
+		.content-search
+			display: flex
+			align-items: center
+			width: 1120px
+			height: 50px
+			padding: 5px
+			border-radius: 8px
+			background-color: $color-white
+			margin-right: 15px
+			box-shadow: 0 0 100px 5px rgba(50, 60, 90, 0.2)
+			.search-select
+				display: flex
+				flex-basis: 20%
+				position: relative
+				height: 100%
+				justify-content: flex-start
+				align-items: center
+				padding: 15px 25px
+				cursor: pointer
+				&::before
+					content: ''
+					position: absolute
+					width: 1px
+					height: 100%
+					padding: 1px 0
+					background-color: rgba(151, 151, 151, 0.2)
+					right: 0
+				&::after
+					content: ''
+					position: absolute
+					width: 16px
+					height: 9px
+					background-image: url(../img/angle-down.svg)
+					right: 20px
+			.search-input
+				display: flex
+				flex-basis: 80%
+				.search
+					width: 100%
+					height: 100%
+					border: 0
+					font-size: 14px
+					color: $color-black
+					margin-left: 25px
+					margin-right: 20px
+	.btn
+		display: flex
+		text-transform: uppercase
+		width: 160px
+		height: 50px
+		font-size: 14px
+		font-weight: 700
+		letter-spacing: 2px
+		align-items: center
+		justify-content: center
+		cursor: pointer
+		border-radius: 8px
+		background-color: $color-ocean-blue
+		border: none
+		color: $color-white
+		padding: 10px
+		transition: all 0.2s ease-in
+		&:hover
+			color: $color-white
+			background-color: $color-ocean-blue
+			box-shadow: 0 0 50px 5px rgba(0, 193, 218, 0.36)
+
+
+#about-us
+	background-color: #F6F8FA
+
+.section
+	width: 100%
+	background-color: $color-white
+	display: flex
+	align-items: center
+	.container
+		display: flex
+		width: 100%
+		justify-content: space-between
+		.section-info
+			display: flex
+			width: 100%
+			height: 100%
+			justify-content: space-between
+			margin-top: 152px
+			margin-bottom: 159px
+			.section__text
+				font-size: 14px
+				line-height: 24px
+				font-weight: 300
+				color: #373A39
+		.section-team-box
+			display: flex
+			align-items: center
+			margin: 0 auto
+			margin-top: 50px
+			.team-box
+				display: flex
+				flex-direction: column
+				align-items: center
+				justify-content: center
+				margin: 0 68px
+				&__title
+					font-size: 14px
+					font-weight: 700
+					line-height: 17px
+					letter-spacing: 1px
+					color: $color-black
+					text-transform: uppercase
+					margin: 14px 0
+				&__subtitle
+					font-size: 12px
+					font-weight: 300
+					line-height: 16px
+					color: #656565
+					margin-bottom: 121px
+
+.section__title
+	font-size: 48px
+	line-height: 75px
+	color: $color-black
+	font-weight: 700
+	position: relative
+	height: 100%
+	padding-bottom: 15px
+	&::after
+		content: ''
+		position: absolute
+		height: 4px
+		width: 60px
+		background: #00C1DA;
+		left: 0
+		bottom: 0
+
+.section-info-team
+	width: 100%
+	display: flex
+	flex-direction: column
+	margin-top: 90px
+	.info-team
+		display: flex
+		margin-top: 100px
+		font-size: 14px
+		color: #373A39
+		line-height: 24px
+		&__percent
+			display: flex
+			flex-direction: column
+			flex-basis: 36%
+			.percent-item
+				font-size: 11px
+				font-weight: 600
+				line-height: 20px
+				letter-spacing: 1px
+				text-transform: uppercase
+				display: flex
+				justify-content: space-between
+				color: $color-black
+				margin: 14px 30px 14px 0px
+				padding-top: 4px
+				position: relative
+				&:nth-child(1)
+					margin-top: 0
+					padding-right: 25px
+					&::after
+						content: ''
+						position: absolute
+						top: 0
+						width: 100%
+						height: 2px
+						background-color: #F0F0F0
+						z-index: 1
+					&::before
+						content: ''
+						position: absolute
+						top: 0
+						width: 90%
+						height: 2px
+						z-index: 2
+						background-color: $color-black
+				&:nth-child(2)
+					padding-right: 65px
+					&::after
+						content: ''
+						position: absolute
+						top: 0
+						width: 100%
+						height: 2px
+						background-color: #F0F0F0
+						z-index: 1
+					&::before
+						content: ''
+						position: absolute
+						top: 0
+						width: 80%
+						height: 2px
+						z-index: 2
+						background-color: $color-black
+				&:nth-child(3)
+					padding-right: 45px
+					&::after
+						content: ''
+						position: absolute
+						top: 0
+						width: 100%
+						height: 2px
+						background-color: #F0F0F0
+						z-index: 1
+					&::before
+						content: ''
+						position: absolute
+						top: 0
+						width: 85%
+						height: 2px
+						z-index: 2
+						background-color: $color-black
+		&__text
+			flex-basis: 64%
+	.info-team-services
+		width: 100%
+		height: 100%
+		display: flex
+		justify-content: space-between
+		margin-bottom: 130px
+		margin-top: 110px
+		.service
+			display: flex
+			flex-direction: column
+			font-size: 14px
+			padding-left: 80px
+			position: relative
+			&:nth-child(1)
+				&::before
+					content: ''
+					position: absolute
+					top: -10px
+					left: 0
+					width: 50px
+					height: 50px
+					background-image: url(../img/ico-vacancy.svg)
+			&:nth-child(2)
+				&::before
+					content: ''
+					position: absolute
+					top: -10px
+					left: 0
+					width: 50px
+					height: 50px
+					background-image: url(../img/ico-development.svg)
+			&:nth-child(3)
+				&::before
+					content: ''
+					position: absolute
+					top: -10px
+					left: 0
+					width: 50px
+					height: 50px
+					background-image: url(../img/ico-design.svg)
+			.service-title
+				padding-bottom: 14px
+				line-height: 20px
+				color: #333333
+				letter-spacing: 4px
+			.service-text
+				line-height: 24px
+				color: #777777
+
+
+.footer
+	display: flex
+	justify-content: center
+	align-items: center
+	background-color:#373A39
+	padding-top: 110px
+	padding-bottom: 60px
+	.footer-info
+		width: 100%
+		display: flex
+		flex-direction: column
+		color: #A8A8A8
+		.info-logo
+			display: flex
+			justify-content: center
+		.social
+			width: 100%
+			padding: 72px 0 64px 0
+			.social-menu
+				display: flex
+				justify-content: space-around
+				align-items: center
+				text-transform: uppercase
+				letter-spacing: 4px
+				line-height: 12px
+				font-weight: 300
+				.menu-item
+					list-style-type: none
+					padding: 0 28px
+					a
+						color: $color-white
+						text-decoration: none
+						transition: all 0.2s ease-in
+						&:hover
+							color: $color-ocean-blue
+		.info-text
 			text-align: center
-			color: $color-gray
+			font-size: 14px
+			line-height: 32px
+			padding-bottom: 57px
+		.to-top-arrow
+			width: 100%
+			display: flex
+			justify-content: center
+			cursor: pointer
+
+.copy
+	width: 100%
+	height: 100px
+	display: flex
+	justify-content: center
+	align-items: center
+	height: 100px
+	font-size: 12px
+	font-weight: 500
+	color: $color-white
+	line-height: 16px
+	background-color: #2A2C2B
+
+.popup-fade
+	display: none
+	&::before
+		content: ''
+		background: #000
+		position: fixed;
+		left: 0
+		top: 0
+		width: 100%;
+		height: 100%
+		opacity: 0.8
+		z-index: 9999
+		transition: .5s
+	.v-center
+		top: calc(50% - 10rem)!important
+	.popup
+		position: fixed
+		display: flex
+		flex-direction: column
+		top: calc(50% - 16rem)
+		left: calc(50% - 300px)
+		padding: 30px
+		width: 600px
+		background: $color-white
+		border-radius: 2px
+		z-index: 99999
+		opacity: 1
+		.form-title
+			font-size: 24px
+			font-weight: 300px
+			color: $color-black
+			text-align: center
+			text-transform: uppercase
+			letter-spacing: 0.5px
+		.popup-close
+			position: absolute
+			top: -5px
+			right: 15px
+			font-size: 32px
+			color: $color-ocean-blue
+			transition: transform .5s ease-in-out
+			&:hover
+				transform: rotate(180deg)
+		.row
+			display: flex
+			align-items: center
+			margin: 5px
+			.col
+				display: flex
+				flex-direction: column
+				width: 100%
+				margin: 0px 5px 
+				.form-label
+					margin: 5px 0px
+					font-size: 14px
+					color: $color-black
+					font-weight: 500
+				.form-input
+					width: 100%
+					padding: 15px
+					height: 40px
+					border: 1px solid $color-ocean-blue
+					border-radius: 4px
+					outline: none
+					transition: all .5s;
+					&:focus
+						box-shadow: 0 0 50px 5px rgba(0, 193, 218, 0.36)
+				.full-w
+					width: 100%
+			.form-copy
+				margin: 5px 10px
+				font-size: 14px
+				color: $color-black
+				font-weight: 500
+				a
+					margin-left: 10px
+					color: $color-ocean-blue
+					text-transform: uppercase
+					transition: .5s
+					display: inline-block
+					text-decoration: none
+					&:after
+						content: ''
+						display: block
+						width: 0
+						height: 2px
+						background: $color-ocean-blue
+						transition: width .3s
+					&:hover::after
+						width: 100%		
+			.btn
+				display: flex
+				text-transform: uppercase
+				width: 110px
+				height: 40px
+				margin: 10px 5px
+				font-size: 14px
+				font-weight: 500
+				align-items: center
+				justify-content: center
+				cursor: pointer
+				border-radius: 4px
+				background-color: transparent
+				color: $color-ocean-blue
+				border: 1px solid $color-ocean-blue
+				padding: 5px
+				transition: all 0.2s ease-in
+				&:hover
+					color: $color-white
+					background-color: $color-ocean-blue
+					box-shadow: 0 0 50px 5px rgba(0, 193, 218, 0.36)
