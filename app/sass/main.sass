@@ -4,6 +4,7 @@
 
 .page-wrap
 	max-width: 1980px
+	width: 100%
 	height: 100%
 	margin: 0 auto
 
@@ -11,6 +12,10 @@
 	max-width: 1200px
 	margin: 0 auto
 	padding: $base-padding
+
+.error
+	color: #ff4e4e
+	border: 1px solid #ff4e4e !important
 
 /* Header */
 .header
@@ -21,6 +26,9 @@
 	background-size: cover
 	background-position: center center
 	.header-nav
+		width: 100%
+		position: fixed
+		z-index: 99
 		height: 94px
 		background-color: $color-white
 	.nav
@@ -76,7 +84,7 @@
 /* Search Input */
 .content
 	width: 100%
-	height: 80%
+	height: 100%
 	position: relative
 	display: flex
 	align-items: center
@@ -97,7 +105,8 @@
 		display: flex
 		justify-content: space-between
 		align-items: center
-		width: 1120px
+		max-width: 1120px
+		width: 100%
 		margin-top: 35px
 		background-color: transparent
 		.content-search
@@ -440,16 +449,18 @@
 		height: 100%
 		opacity: 0.8
 		z-index: 9999
+		transition: .5s
+	.v-center
+		top: calc(50% - 10rem)!important
 	.popup
 		position: fixed
 		display: flex
 		flex-direction: column
-		top: calc(50% - 30vh)
+		top: calc(50% - 16rem)
 		left: calc(50% - 300px)
 		padding: 30px
 		width: 600px
 		background: $color-white
-		border: 1px solid $color-ocean-blue
 		border-radius: 2px
 		z-index: 99999
 		opacity: 1
@@ -466,37 +477,68 @@
 			right: 15px
 			font-size: 32px
 			color: $color-ocean-blue
+			transition: transform .5s ease-in-out
+			&:hover
+				transform: rotate(180deg)
 		.row
 			display: flex
 			align-items: center
 			margin: 5px
-			.form-input
-				width: 50%
-				padding: 15px
-				height: 40px
-				margin: 10px
-				border: 1px solid $color-ocean-blue
-				border-radius: 16px
-				outline: none
-				transition: all .5s;
-				&:focus
-					box-shadow: 0 0 50px 5px rgba(0, 193, 218, 0.36)
-			.full-w
+			.col
+				display: flex
+				flex-direction: column
 				width: 100%
+				margin: 0px 5px 
+				.form-label
+					margin: 5px 0px
+					font-size: 14px
+					color: $color-black
+					font-weight: 500
+				.form-input
+					width: 100%
+					padding: 15px
+					height: 40px
+					border: 1px solid $color-ocean-blue
+					border-radius: 4px
+					outline: none
+					transition: all .5s;
+					&:focus
+						box-shadow: 0 0 50px 5px rgba(0, 193, 218, 0.36)
+				.full-w
+					width: 100%
 			.form-copy
-				margin: 5px
+				margin: 5px 10px
+				font-size: 14px
+				color: $color-black
+				font-weight: 500
+				a
+					margin-left: 10px
+					color: $color-ocean-blue
+					text-transform: uppercase
+					transition: .5s
+					display: inline-block
+					text-decoration: none
+					&:after
+						content: ''
+						display: block
+						width: 0
+						height: 2px
+						background: $color-ocean-blue
+						transition: width .3s
+					&:hover::after
+						width: 100%		
 			.btn
 				display: flex
 				text-transform: uppercase
 				width: 110px
 				height: 40px
-				margin: 10px
+				margin: 10px 5px
 				font-size: 14px
 				font-weight: 500
 				align-items: center
 				justify-content: center
 				cursor: pointer
-				border-radius: 16px
+				border-radius: 4px
 				background-color: transparent
 				color: $color-ocean-blue
 				border: 1px solid $color-ocean-blue
@@ -506,4 +548,3 @@
 					color: $color-white
 					background-color: $color-ocean-blue
 					box-shadow: 0 0 50px 5px rgba(0, 193, 218, 0.36)
-			

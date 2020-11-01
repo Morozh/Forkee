@@ -32,7 +32,7 @@
             </div>
             <div class="nav__menu">
               <ul class="menu">
-                <li class="menu-item"><a href="#">HOME</a></li>
+                <li class="menu-item"><a href="#header">HOME</a></li>
                 <li class="menu-item"><a href="#about-us">ABOUT US</a></li>
                 <li class="menu-item"><a href="#expertise">EXPERTISE</a></li>
                 <li class="menu-item"><a href="#our-team">OUR TEAM</a></li>
@@ -214,26 +214,64 @@
     </div>
 
     <!-- Modals -->
-    <div class="popup-fade">
-      <form class="popup" action="" method="post">
+    <!-- <div class="popup-fade">
+      <form id="reg-form" class="popup" action="" method="post">
         <a class="popup-close" href="#">&times;</a>
         <h2 class="form-title">Forkee</h2>
         <div class="row">
-          <input class="form-input" type="text" placeholder="First name" />
-          <input class="form-input" type="text" placeholder="Last name" />
+          <div class="col">
+            <label class="form-label" for="fname">First name:</label>
+            <input id="fname" class="form-input" type="text" placeholder="First name" />
+          </div>
+          <div class="col">
+            <label class="form-label" for="lname">Last name:</label>
+            <input id="lname" class="form-input" type="text" placeholder="Last name" />
+          </div>
         </div>
         <div class="row">
-          <input class="form-input full-w" type="text" placeholder="Email" />
+          <div class="col">
+            <label class="form-label">Email: </label>
+            <input id="user_email" class="form-input full-w" type="email" placeholder="Email" />
+          </div>
         </div>
         <div class="row">
-          <input class="form-input full-w" type="text" placeholder="Password" />
+          <div class="col">
+            <label class="form-label">Password: </label>
+            <input id="psword" class="form-input full-w" type="password" placeholder="Password" />
+          </div>
         </div>
         <div class="row">
-          <input class="form-input full-w" type="text" placeholder="Confirm Password" />
+          <div class="col">
+            <label class="form-label">Confirm Password: </label>
+            <input id="c_psword" class="form-input full-w" type="password" placeholder="Confirm Password" />
+          </div>
         </div>
         <div class="row">
-          <input type="submit" class="btn" value="Sign Up" />
+          <input id="reg-submit" type="submit" class="btn" value="Sign Up" />
           <span class="form-copy">Already registered?<a href="#"> Sign In</a></span>
+        </div>
+      </form>		
+    </div> -->
+
+    <div class="popup-fade">
+      <form id="log-form" class="popup v-center" action="" method="post">
+        <a class="popup-close" href="#">&times;</a>
+        <h2 class="form-title">Forkee</h2>
+        <div class="row">
+          <div class="col">
+            <label class="form-label">Email: </label>
+            <input id="user_email" class="form-input full-w" type="email" placeholder="Email" />
+          </div>
+        </div>
+        <div class="row">
+          <div class="col">
+            <label class="form-label">Password: </label>
+            <input id="psword" class="form-input full-w" type="password" placeholder="Password" />
+          </div>
+        </div>
+        <div class="row">
+          <input id="reg-submit" type="submit" class="btn" value="Sign In" />
+          <span class="form-copy">Not registered?<a href="#"> Sign Up</a></span>
         </div>
       </form>		
     </div>
@@ -241,6 +279,8 @@
   </main>
 
     <!-- JavaScript -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.17.0/jquery.validate.js"></script>
     <script src="libs/jquery-3.5.1.min.js"></script>
     <script src="libs/slick/slick.min.js"></script>
     <script src="js/script.js"></script>

@@ -73,6 +73,7 @@ h1, h2, h3 {
 
 .page-wrap {
   max-width: 1980px;
+  width: 100%;
   height: 100%;
   margin: 0 auto; }
 
@@ -80,6 +81,10 @@ h1, h2, h3 {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 20px; }
+
+.error {
+  color: #ff4e4e;
+  border: 1px solid #ff4e4e !important; }
 
 /* Header */
 .header {
@@ -90,6 +95,9 @@ h1, h2, h3 {
   background-size: cover;
   background-position: center center; }
   .header .header-nav {
+    width: 100%;
+    position: fixed;
+    z-index: 99;
     height: 94px;
     background-color: #fff; }
   .header .nav {
@@ -145,7 +153,7 @@ h1, h2, h3 {
 /* Search Input */
 .content {
   width: 100%;
-  height: 80%;
+  height: 100%;
   position: relative;
   display: flex;
   align-items: center; }
@@ -166,7 +174,8 @@ h1, h2, h3 {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 1120px;
+    max-width: 1120px;
+    width: 100%;
     margin-top: 35px;
     background-color: transparent; }
     .content .content-seach-input .content-search {
@@ -503,17 +512,19 @@ h1, h2, h3 {
     width: 100%;
     height: 100%;
     opacity: 0.8;
-    z-index: 9999; }
+    z-index: 9999;
+    transition: .5s; }
+  .popup-fade .v-center {
+    top: calc(50% - 10rem) !important; }
   .popup-fade .popup {
     position: fixed;
     display: flex;
     flex-direction: column;
-    top: calc(50% - 30vh);
+    top: calc(50% - 16rem);
     left: calc(50% - 300px);
     padding: 30px;
     width: 600px;
     background: #fff;
-    border: 1px solid #00C1DA;
     border-radius: 2px;
     z-index: 99999;
     opacity: 1; }
@@ -529,38 +540,69 @@ h1, h2, h3 {
       top: -5px;
       right: 15px;
       font-size: 32px;
-      color: #00C1DA; }
+      color: #00C1DA;
+      transition: transform .5s ease-in-out; }
+      .popup-fade .popup .popup-close:hover {
+        transform: rotate(180deg); }
     .popup-fade .popup .row {
       display: flex;
       align-items: center;
       margin: 5px; }
-      .popup-fade .popup .row .form-input {
-        width: 50%;
-        padding: 15px;
-        height: 40px;
-        margin: 10px;
-        border: 1px solid #00C1DA;
-        border-radius: 16px;
-        outline: none;
-        transition: all .5s; }
-        .popup-fade .popup .row .form-input:focus {
-          box-shadow: 0 0 50px 5px rgba(0, 193, 218, 0.36); }
-      .popup-fade .popup .row .full-w {
-        width: 100%; }
+      .popup-fade .popup .row .col {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        margin: 0px 5px; }
+        .popup-fade .popup .row .col .form-label {
+          margin: 5px 0px;
+          font-size: 14px;
+          color: #000;
+          font-weight: 500; }
+        .popup-fade .popup .row .col .form-input {
+          width: 100%;
+          padding: 15px;
+          height: 40px;
+          border: 1px solid #00C1DA;
+          border-radius: 4px;
+          outline: none;
+          transition: all .5s; }
+          .popup-fade .popup .row .col .form-input:focus {
+            box-shadow: 0 0 50px 5px rgba(0, 193, 218, 0.36); }
+        .popup-fade .popup .row .col .full-w {
+          width: 100%; }
       .popup-fade .popup .row .form-copy {
-        margin: 5px; }
+        margin: 5px 10px;
+        font-size: 14px;
+        color: #000;
+        font-weight: 500; }
+        .popup-fade .popup .row .form-copy a {
+          margin-left: 10px;
+          color: #00C1DA;
+          text-transform: uppercase;
+          transition: .5s;
+          display: inline-block;
+          text-decoration: none; }
+          .popup-fade .popup .row .form-copy a:after {
+            content: '';
+            display: block;
+            width: 0;
+            height: 2px;
+            background: #00C1DA;
+            transition: width .3s; }
+          .popup-fade .popup .row .form-copy a:hover::after {
+            width: 100%; }
       .popup-fade .popup .row .btn {
         display: flex;
         text-transform: uppercase;
         width: 110px;
         height: 40px;
-        margin: 10px;
+        margin: 10px 5px;
         font-size: 14px;
         font-weight: 500;
         align-items: center;
         justify-content: center;
         cursor: pointer;
-        border-radius: 16px;
+        border-radius: 4px;
         background-color: transparent;
         color: #00C1DA;
         border: 1px solid #00C1DA;
