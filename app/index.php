@@ -252,7 +252,7 @@
         </div>
         <div class="row">
           <input id="reg-submit" type="submit" class="btn" value="Sign Up" />
-          <span class="form-copy">Already registered?<a href="#"> Sign In</a></span>
+          <!-- <span class="form-copy">Already registered?<a href="#"> Sign In</a></span> -->
         </div>
       </form>		
     </div>
@@ -275,7 +275,7 @@
         </div>
         <div class="row">
           <input id="reg-submit" type="submit" class="btn" value="Sign In" />
-          <span class="form-copy">Not registered?<a href="#"> Sign Up</a></span>
+          <!-- <span class="form-copy">Not registered?<a href="#"> Sign Up</a></span> -->
         </div>
       </form>		
     </div>
