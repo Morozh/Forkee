@@ -129,6 +129,9 @@ h1, h2, h3 {
             text-decoration: none;
             font-size: 12px;
             font-weight: 700; }
+      .header .nav__menu .popup-log-open {
+        border: none !important;
+        margin-right: 40px !important; }
       .header .nav__menu .btn {
         display: flex;
         text-transform: uppercase;
@@ -567,7 +570,7 @@ h1, h2, h3 {
           outline: none;
           transition: all .5s; }
           .popup-fade .popup .row .col .form-input:focus {
-            box-shadow: 0 0 50px 5px rgba(0, 193, 218, 0.36); }
+            box-shadow: 0 0 10px 5px rgba(0, 193, 218, 0.36); }
         .popup-fade .popup .row .col .full-w {
           width: 100%; }
       .popup-fade .popup .row .form-copy {

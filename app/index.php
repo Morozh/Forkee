@@ -38,6 +38,7 @@
                 <li class="menu-item"><a href="#our-team">OUR TEAM</a></li>
                 <li class="menu-item"><a href="#contact">CONTACT</a></li>
               </ul>
+              <input class="btn popup-log-open" type="button" value="sign in" />
               <input class="btn popup-reg-open" type="button" value="sign up" />
             </div>
           </nav>
@@ -217,7 +218,7 @@
     </div>
 
     <!-- Modals -->
-    <!-- <div class="popup-fade">
+    <div class="popup-fade popup-reg">
       <form id="reg-form" class="popup" action="" method="post">
         <a class="popup-close" href="#">&times;</a>
         <h2 class="form-title">Forkee</h2>
@@ -254,9 +255,9 @@
           <span class="form-copy">Already registered?<a href="#"> Sign In</a></span>
         </div>
       </form>		
-    </div> -->
+    </div>
 
-    <div class="popup-fade">
+    <div class="popup-fade popup-log">
       <form id="log-form" class="popup v-center" action="" method="post">
         <a class="popup-close" href="#">&times;</a>
         <h2 class="form-title">Forkee</h2>
