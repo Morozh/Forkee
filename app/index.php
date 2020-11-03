@@ -1,6 +1,8 @@
 <?php 
+  session_start();
   require "includes/db.php";
 ?>
+
 <!doctype html>
 <html lang="ru">
   <head>
@@ -42,26 +44,23 @@
               <input class="btn popup-reg-open" type="button" value="sign up" />
             </div>
           </nav>
-          <div class="content">
-            <h1 class="content-title">
-              ANYTHING YOU NEED, <br />
-              WE’VE GOT YOU COVERED.
-            </h1>
-            <h2 class="content-subtitle">
-              classified advertissements website
-            </h2>
-            <div class="content-seach-input">
-              <div class="content-search">
-                <div class="search-select">
-                  <select>
-                    <option>CITY</option>
-                    <option>Москва</option>
-                    <option>Екатеринбург</option>
-                  </select>
-                </div>
-               <form method = "POST" action = "/chat">
-                  <input class="search" type="text" name="text"  placeholder="FIND VACANCY" />
-                </form>
+        </div>
+      </div>
+      <div class="content">
+        <div class="container">
+          <h1 class="content-title">
+            FORKEE
+          </h1>
+          <span class="content-subtitle">
+            EASY TO FIND JOB
+          </span>
+          <div class="content-seach-input">
+            <div class="content-search">
+              <div class="search-select">
+                Москва
+              </div>
+              <div class="search-input">
+                <input class="search" type="search" placeholder="FIND VACANCY" />
               </div>
             </div>
             <input class="btn" type="button" value="search"  />
@@ -216,66 +215,65 @@
         </span>
       </div>
     </div>
-
     <!-- Modals -->
     <div class="popup-fade popup-reg">
-      <form id="reg-form" class="popup" action="" method="post">
+      <form id="reg-form" class="popup" action="reg.php" method="post">
         <a class="popup-close" href="#">&times;</a>
         <h2 class="form-title">Forkee</h2>
         <div class="row">
           <div class="col">
             <label class="form-label" for="fname">First name:</label>
-            <input id="fname" class="form-input" type="text" placeholder="First name" />
+            <input id="fname" class="form-input" type="text" placeholder="First name"  name = "fname"/>
           </div>
           <div class="col">
             <label class="form-label" for="lname">Last name:</label>
-            <input id="lname" class="form-input" type="text" placeholder="Last name" />
+            <input id="lname" class="form-input" type="text" placeholder="Last name" name = "lname" />
           </div>
         </div>
         <div class="row">
           <div class="col">
             <label class="form-label">Email: </label>
-            <input id="user_email" class="form-input full-w" type="email" placeholder="Email" />
+            <input id="user_email" class="form-input full-w" type="email" placeholder="Email" name = "user_email"/>
           </div>
         </div>
         <div class="row">
           <div class="col">
             <label class="form-label">Password: </label>
-            <input id="psword" class="form-input full-w" type="password" placeholder="Password" />
+            <input id="psword" class="form-input full-w" type="password" placeholder="Password" name = "pass" />
           </div>
         </div>
         <div class="row">
           <div class="col">
             <label class="form-label">Confirm Password: </label>
-            <input id="c_psword" class="form-input full-w" type="password" placeholder="Confirm Password" />
+            <input id="c_psword" class="form-input full-w" type="password" placeholder="Confirm Password" name="confpass" />
           </div>
         </div>
         <div class="row">
-          <input id="reg-submit" type="submit" class="btn" value="Sign Up" />
-          <!-- <span class="form-copy">Already registered?<a href="#"> Sign In</a></span> -->
+          <input id="reg-submit" type="submit" class="btn" value="Sign Up" name="signup" />
+          <span class="form-copy">Already registered?<a href="#"> Sign In</a></span>
         </div>
       </form>		
     </div>
 
     <div class="popup-fade popup-log">
-      <form id="log-form" class="popup v-center" action="" method="post">
+      <form id="log-form" class="popup v-center" action="auth.php" method="post">
         <a class="popup-close" href="#">&times;</a>
         <h2 class="form-title">Forkee</h2>
         <div class="row">
           <div class="col">
             <label class="form-label">Email: </label>
-            <input id="user_email" class="form-input full-w" type="email" placeholder="Email" />
+            <input id="user_email" class="form-input full-w" type="email" placeholder="Email"  name = "user_email"/>
           </div>
         </div>
         <div class="row">
           <div class="col">
             <label class="form-label">Password: </label>
-            <input id="psword" class="form-input full-w" type="password" placeholder="Password" />
+            <input id="psword" class="form-input full-w" type="password" placeholder="Password" name = "pass"/>
           </div>
         </div>
         <div class="row">
-          <input id="reg-submit" type="submit" class="btn" value="Sign In" />
-          <!-- <span class="form-copy">Not registered?<a href="#"> Sign Up</a></span> -->
+          <input id="reg-submit" type="submit" class="btn" value="Sign In"  name="signin"/>
+          <span class="form-copy">Not registered?<a href="#"> Sign Up</a></span>
         </div>
       </form>		
     </div>

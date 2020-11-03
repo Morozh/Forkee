@@ -87,7 +87,7 @@ $errors[] = 'Неверно введен е-mail';
 
 // Проверка на уникальность email
 
-if(R::count('users', "Email = ?", array($data['user_email'])) > 0) {
+if(R::count('users', "usmail = ?", array($data['user_email'])) > 0) {
 
 $errors[] = "Пользователь с таким Email существует!";
 
