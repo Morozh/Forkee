@@ -6,7 +6,7 @@ require "rb.php";
 
 // Подключаемся к БД
 
-R::setup( 'mysql:host=localhost; dbname=forkee_database',
+R::setup( 'mysql:host=localhost; dbname=forkee',
 
 'root', 'root' );
 
@@ -15,5 +15,6 @@ R::setup( 'mysql:host=localhost; dbname=forkee_database',
  if(!R::testConnection()) die('No DB connection!');
 
  // Создаем сессию для авторизации
+ session_start();
  ?>
 
