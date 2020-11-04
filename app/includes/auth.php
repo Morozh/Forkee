@@ -11,7 +11,6 @@
             if(password_verify($data['psword'], $user->password)) {
                 $_SESSION['logged_user'] = $user;
                 header('Location: test.php');
-                echo 'Вы авторизованы!';
             } else {
                 $errors[] = 'Пароль неверно введен!';
             }
