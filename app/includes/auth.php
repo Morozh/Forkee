@@ -10,7 +10,7 @@
         if ($user) {
             if(password_verify($data['psword'], $user->password)) {
                 $_SESSION['logged_user'] = $user;
-                header('Location: test.php');
+                header('Location: ../index.php');
             } else {
                 $errors[] = 'Пароль неверно введен!';
             }

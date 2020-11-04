@@ -40,8 +40,13 @@
                 <li class="menu-item"><a href="#our-team">OUR TEAM</a></li>
                 <li class="menu-item"><a href="#contact">CONTACT</a></li>
               </ul>
-              <input class="btn popup-log-open" type="button" value="sign in" />
-              <input class="btn popup-reg-open" type="button" value="sign up" />
+              <?php if( isset($_SESSION['logged_user'])) : ?>
+                <?php echo '<span class="logged-name"> Имя </span>' ?>
+                <input class="btn" type="button" value="logout" onclick="window.location.href = '/app/includes/logout.php'" />
+              <?php else: ?>
+                <input class="btn popup-log-open" type="button" value="sign in" />
+                <input class="btn popup-reg-open" type="button" value="sign up" />
+              <?php endif; ?>
             </div>
           </nav>
         </div>
@@ -77,14 +82,13 @@
             About Us
           </div>
           <div class="section__text">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium commodi totam culpa, dolorum asperiores iusto<br /> 
-            quidem, nesciunt hic eaque blanditiis enim, id maiores nam nobis dignissimos aliquam ad minus nisi. In, fuga blanditiis non<br /> 
-            cum cupiditate dolore, accusantium odio doloremque quibusdam dignissimos nemo sed nisi, similique, mollitia et! Autem<br /> 
-            laborum sint tenetur, earum facere veniam?<br />
+            Greetings! We team forever young developers. To make a website look professional yet unconventional is not easy  <br /> 
+            but our company makes it look effortless. From the brand showcase to the photo display of the workplace, this bar-themed<br /> 
+            website does a good job of establishing brand identity and promoting company reputation.<br /> 
             <br />
-            Sunt fugiat veniam consectetur soluta quia ex tempora quaerat, perferendis! Itaque a praesentium saepe ex distinctio<br />
-            aliquid quis laborum sit, porro dolor odio, iste eos laboriosam dolorum maiores harum reiciendis vitae doloribus illum<br />
-            voluptatibus nobis maxime assumenda ipsam tempora fugiat. Perspiciatis quibusdam hic cum tempore.
+            This is a perfect example of a full stack web developer portfolio, which presents  both the author’s skills and personality. <br />
+            The entire site looks like a designer’s little green world. Sean also helps others build personal websites. <br />
+            Additionally, it has a lot of personalized elements, making it more eye-catching.
           </div>
         </div>
       </div>
@@ -113,36 +117,37 @@
               </div>
             </div>
             <div class="info-team__text">
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium commodi totam culpa, dolorum asperiores iusto<br /> 
-              quidem, nesciunt hic eaque blanditiis enim, id maiores nam nobis dignissimos aliquam ad minus nisi.<br />
+              It will not be difficult to conduct an examination of the vacancy, provided that this is a familiar occupation for you. But if <br /> 
+              you are not familiar with this magic phrase and have no idea what it is, we recommend that you familiarize yourself <br />
+              with the job examination procedure.<br />
               <br />
-              Autem laborum sint tenetur, earum facere veniam? Sunt fugiat veniam consectetur soluta quia ex tempora quaerat,<br /> 
-              perferendis! Itaque a praesentium saepe ex distinctio aliquid quis.
+              Portrait of an ideal job the First step is to determine what kind of job, in what area and company, and in what city you want to get. 
+              If you already perferendis! Itaque a praesentium saepe ex distinctio aliquid quis. know what will happen to you and your career in 3,5,10 years, 
+              then go straight to the next Chapter.And here I turn to those,<br /> 
             </div>
           </div>
           <div class="info-team-services">
             <div class="service">
               <div class="service-title">VACANCY</div>
-              <div class="service-text">Lorem Ipsum Proin gravida nibh vel<br />
-                velit auctor aliquet. Aenean sollicitudin, lorem<br />
-                quis bibendum auctor, nisi elit consequat<br />
-                ipsum.
+              <div class="service-text">All of us sooner or later face a job search.<br />
+                Someone is looking for a suitable internship <br />
+                after University.
               </div>
             </div>
             <div class="service">
               <div class="service-title">WEB DEVELOPMENT</div>
-              <div class="service-text">Lorem Ipsum Proin gravida nibh vel<br />
-                velit auctor aliquet. Aenean sollicitudin, lorem<br />
-                quis bibendum auctor, nisi elit consequat<br />
-                ipsum.
+              <div class="service-text">A more comprehensive list of tasks<br />
+                to which Web development commonly<br />
+                include Web engineering, Web design<br />
+                Web content development.
               </div>
             </div>
             <div class="service">
               <div class="service-title">GRAPHIC DESIGN</div>
-              <div class="service-text">Lorem Ipsum Proin gravida nibh vel<br />
-                velit auctor aliquet. Aenean sollicitudin, lorem<br />
-                quis bibendum auctor, nisi elit consequat<br />
-                ipsum.
+              <div class="service-text">Is the process of visual communication through the use <br />
+                of typography, photography, iconography and illustration.The <br />
+                field considered a subset of visual communication and<br />
+                communication design.
               </div>
             </div>
           </div>
@@ -250,7 +255,6 @@
         </div>
         <div class="row">
           <input id="reg-submit" type="submit" class="btn" value="Sign Up" name="signup" />
-          <span class="form-copy">Already registered?<a href="#"> Sign In</a></span>
         </div>
       </form>		
     </div>
@@ -273,7 +277,6 @@
         </div>
         <div class="row">
           <input id="reg-submit" type="submit" class="btn" value="Sign In"  name="signin"/>
-          <span class="form-copy">Not registered?<a href="#"> Sign Up</a></span>
         </div>
       </form>		
     </div>
