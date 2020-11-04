@@ -1,20 +1,13 @@
 <?php 
-
-// Подключаем библиотеку RedBeanPHP
-
-require "rb.php";
+require "libs/rb.php";
 
 // Подключаемся к БД
-
-R::setup( 'mysql:host=localhost; dbname=forkee',
-
-'root', 'root' );
+R::setup( 'mysql:host=localhost;dbname=forkee',
+'root', '' );
 
 // Проверка подключения к БД
+if(!R::testConnection()) die('No DB connection!');
 
- if(!R::testConnection()) die('No DB connection!');
-
- // Создаем сессию для авторизации
- session_start();
- ?>
+session_start();
+?>
 

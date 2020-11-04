@@ -1,22 +1,17 @@
 <?php
-    require "db.php"; // подключаем файл для соединения с БД
-?>
+    require "includes/db.php"; // подключаем файл для соединения с БД
 
-<?php
     $data = $_POST;
 
     if(isset($data['signin'])) {
-
         $errors = array();
-        // Проводим поиск пользователей в таблице users
-
         $user = R::findOne('users', 'usmail = ?', array($data['user_email']));
 
         if ($user) {
-            // Если логин существует, тогда проверяем пароль
             if(password_verify($data['psword'], $user->password)) {
-                header('Location: index.php');
                 $_SESSION['logged_user'] = $user;
+                header('Location: test.php');
+                echo 'Вы авторизованы!';
             } else {
                 $errors[] = 'Пароль неверно введен!';
             }
@@ -31,3 +26,4 @@
         }
 
     }
+?>

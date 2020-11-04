@@ -239,13 +239,13 @@
         <div class="row">
           <div class="col">
             <label class="form-label">Password: </label>
-            <input id="psword" class="form-input full-w" type="password" placeholder="Password" name = "pass" />
+            <input id="psword" class="form-input full-w" type="password" placeholder="Password" name = "psword" />
           </div>
         </div>
         <div class="row">
           <div class="col">
             <label class="form-label">Confirm Password: </label>
-            <input id="c_psword" class="form-input full-w" type="password" placeholder="Confirm Password" name="confpass" />
+            <input id="c_psword" class="form-input full-w" type="password" placeholder="Confirm Password" name="c_psword" />
           </div>
         </div>
         <div class="row">
@@ -268,7 +268,7 @@
         <div class="row">
           <div class="col">
             <label class="form-label">Password: </label>
-            <input id="psword" class="form-input full-w" type="password" placeholder="Password" name = "pass"/>
+            <input id="psword" class="form-input full-w" type="password" placeholder="Password" name = "psword"/>
           </div>
         </div>
         <div class="row">
