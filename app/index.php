@@ -217,7 +217,7 @@
     </div>
     <!-- Modals -->
     <div class="popup-fade popup-reg">
-      <form id="reg-form" class="popup" action="reg.php" method="post">
+      <form id="reg-form" class="popup" action="includes/reg.php" method="post">
         <a class="popup-close" href="#">&times;</a>
         <h2 class="form-title">Forkee</h2>
         <div class="row">
@@ -256,7 +256,7 @@
     </div>
 
     <div class="popup-fade popup-log">
-      <form id="log-form" class="popup v-center" action="auth.php" method="post">
+      <form id="log-form" class="popup v-center" action="includes/auth.php" method="post">
         <a class="popup-close" href="#">&times;</a>
         <h2 class="form-title">Forkee</h2>
         <div class="row">

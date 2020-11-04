@@ -1,5 +1,5 @@
 <?php
-    require "includes/db.php"; // подключаем файл для соединения с БД
+    require "db.php";
 
     $data = $_POST;
 

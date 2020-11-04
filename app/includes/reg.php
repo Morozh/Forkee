@@ -1,5 +1,5 @@
 <?php 
-    require "includes/db.php";
+    require "db.php";
 
     $data = $_POST;
 
