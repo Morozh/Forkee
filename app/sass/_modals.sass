@@ -1,0 +1,115 @@
+@import "fonts"
+@import "base"
+@import "vars"
+
+.popup-fade
+	display: none
+	&::before
+		content: ''
+		background: #000
+		position: fixed;
+		left: 0
+		top: 0
+		width: 100%;
+		height: 100%
+		opacity: 0.8
+		z-index: 9999
+		transition: .5s
+	.v-center
+		top: calc(50% - 10rem)!important
+	.popup
+		position: fixed
+		display: flex
+		flex-direction: column
+		top: calc(50% - 16rem)
+		left: calc(50% - 300px)
+		padding: 30px
+		width: 600px
+		background: $color-white
+		border-radius: 2px
+		z-index: 99999
+		opacity: 1
+		.form-title
+			font-size: 24px
+			font-weight: 300px
+			color: $color-black
+			text-align: center
+			text-transform: uppercase
+			letter-spacing: 0.5px
+		.popup-close
+			position: absolute
+			top: -5px
+			right: 15px
+			font-size: 32px
+			color: $color-ocean-blue
+			transition: transform .5s ease-in-out
+			&:hover
+				transform: rotate(180deg)
+		.row
+			display: flex
+			align-items: center
+			margin: 5px
+			.col
+				display: flex
+				flex-direction: column
+				width: 100%
+				margin: 0px 5px 
+				.form-label
+					margin: 5px 0px
+					font-size: 14px
+					color: $color-black
+					font-weight: 500
+				.form-input
+					width: 100%
+					padding: 15px
+					height: 40px
+					border: 1px solid $color-ocean-blue
+					border-radius: 4px
+					outline: none
+					transition: all .5s;
+					&:focus
+						box-shadow: 0 0 10px 5px rgba(0, 193, 218, 0.36)
+				.full-w
+					width: 100%
+			.form-copy
+				margin: 5px 10px
+				font-size: 14px
+				color: $color-black
+				font-weight: 500
+				a
+					margin-left: 10px
+					color: $color-ocean-blue
+					text-transform: uppercase
+					transition: .5s
+					display: inline-block
+					text-decoration: none
+					&:after
+						content: ''
+						display: block
+						width: 0
+						height: 2px
+						background: $color-ocean-blue
+						transition: width .3s
+					&:hover::after
+						width: 100%		
+			.btn
+				display: flex
+				text-transform: uppercase
+				width: 110px
+				height: 40px
+				margin: 10px 5px
+				font-size: 14px
+				font-weight: 500
+				align-items: center
+				justify-content: center
+				cursor: pointer
+				border-radius: 4px
+				background-color: transparent
+				color: $color-ocean-blue
+				border: 1px solid $color-ocean-blue
+				padding: 5px
+				transition: all 0.2s ease-in
+				&:hover
+					color: $color-white
+					background-color: $color-ocean-blue
+					box-shadow: 0 0 50px 5px rgba(0, 193, 218, 0.36)

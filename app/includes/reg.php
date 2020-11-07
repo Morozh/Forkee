@@ -61,7 +61,7 @@ if(empty($errors)) {
     $user->password = password_hash($data['psword'], PASSWORD_DEFAULT);
 
     R::store($user);
-    echo '<div style="color: green; ">Вы успешно зарегистрированы! Можно <a href="login.php">авторизоваться</a>.</div><hr>';
+    echo '<div style="color: green; ">Вы успешно зарегистрированы! Можно <a href="/app">авторизоваться</a>.</div><hr>';
 } else {
     echo '<div style="color: red; ">' . array_shift($errors). '</div>';
 }

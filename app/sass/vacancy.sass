@@ -1,0 +1,216 @@
+@import "fonts"
+@import "base"
+@import "vars"
+@import "footer"
+@import "modals"
+
+.page-wrap
+	max-width: 1980px
+	width: 100%
+	overflow: hidden
+
+.container 
+	max-width: 1200px
+	margin: 0 auto
+	padding: $base-padding
+	height: 100%
+
+.error
+	color: #ff4e4e
+	border: 1px solid #ff4e4e !important
+
+.profile-dropdown
+	position: relative
+	margin: 0
+	img
+		cursor: pointer
+	&:hover
+		.hidden-block
+			opacity: 1
+			top: 70%
+			right: 50%
+			z-index: 9999
+			width: 200px
+			transition: .3s
+			pointer-events: auto
+	.hidden-block
+		position: absolute
+		pointer-events: none
+		opacity: 0
+		display: flex
+		justify-content: center
+		flex-direction: column
+		align-items: center
+		padding: 15px
+		width: 100%
+		height: 100px
+		background: $color-white
+		-moz-box-shadow: 0 5px 5px rgba(0,0,0,0.3)
+		-webkit-box-shadow: 0 5px 5px rgba(0,0,0,0.3)
+		box-shadow: 0 0px 5px rgba(0,0,0,0.3)
+		border: 1px solid #1D1D1D
+		.logged-name
+			color: #1D1D1D
+			font-size: 14px
+			font-weight: 500
+			text-decoration: none
+			position: relative
+			margin-bottom: 15px
+			border-bottom: 1px solid #1D1D1D
+
+/* Header */
+.header
+	width: 100%
+	background: #FFF
+	.header-nav
+		width: 100%
+		height: 94px
+		background-color: $color-white
+	.nav
+		display: flex
+		justify-content: space-between
+		align-items: center
+		padding: 25px 0px
+		&__menu
+			display: flex
+			align-items: center
+			.menu
+				list-style-type: none
+				display: flex
+				align-items: center
+				margin: 0
+				padding: 0
+				.menu-item
+					list-style-type: none
+					margin: 0px 17px
+					padding: 0 5px
+					border-bottom: 2px solid transparent
+					cursor: pointer
+					transition: all 0.2s ease-in
+					&:last-child
+						margin-right: 40px
+					a
+						color: $color-black
+						text-decoration: none
+						font-size: 12px
+						font-weight: 700
+						transition: .5s
+						display: inline-block
+						text-decoration: none
+						&:after
+							content: ''
+							display: block
+							width: 0
+							height: 2px
+							background: $color-ocean-blue
+							transition: width .3s
+						&:hover::after
+							width: 100%	
+			.popup-log-open
+				border: none!important
+				margin-right: 40px!important
+			.btn
+				display: flex
+				text-transform: uppercase
+				width: 110px
+				height: 30px
+				font-size: 12px
+				font-weight: 700
+				align-items: center
+				justify-content: center
+				cursor: pointer
+				border-radius: 16px
+				background-color: transparent
+				color: $color-ocean-blue
+				border: 1px solid $color-ocean-blue
+				padding: 5px
+				transition: all 0.2s ease-in
+				&:hover
+					color: $color-white
+					background-color: $color-ocean-blue
+					box-shadow: 0 0 15px 5px rgba(0, 193, 218, 0.16)
+
+.search-block
+	width: 100%
+	height: 94px
+	background-color: $color-black
+	.search-box-bg
+		width: 100%
+		height: 100%
+		background: transparent
+		display: flex
+		align-items: center
+		justify-content: space-between
+		.total-vac
+			font-size: 36px
+			font-weight: 400
+			color: $color-white
+			line-height: 42px
+		.search-vac
+			display: flex
+			justify-content: space-between
+			&__input
+				width: 556px
+				height: 42px
+				margin: 0 25px
+				.v-input
+					width: 100%
+					height: 100%
+					border: 0
+					font-size: 16px
+					color: $color-black
+					padding: 15px
+			&__btn
+				.v-btn
+					display: flex
+					text-transform: uppercase
+					width: 110px
+					height: 42px
+					font-size: 14px
+					font-weight: 500
+					letter-spacing: 2px
+					align-items: center
+					justify-content: center
+					cursor: pointer
+					background-color: transparent
+					border: 1px solid $color-ocean-blue
+					color: $color-white
+					padding: 8px
+					transition: all 0.2s ease-in
+					&:hover
+						background-color: $color-ocean-blue
+						color: $color-black
+						
+.section
+	width: 100%
+	background-color: $color-white
+	display: flex
+	align-items: center
+	.container
+		display: flex
+		width: 100%
+		justify-content: space-between
+		margin: 20px auto
+		.filters-box
+			width: 310px
+			height: 400px
+			position: static
+			margin-left: 0px
+			top: 0px
+			color: $color-white
+			text-align: center
+			background-color: $color-black
+		.card-box-container
+			width: 100%
+			height: 100%
+			display: flex
+			flex-direction: column
+			.card-box-item
+				height: 200px
+				padding: 15px
+				margin: 0 0 26px 38px
+				cursor: pointer
+				border: 1px solid #909090
+				.card-box-row
+					display: flex
+					justify-content: space-between

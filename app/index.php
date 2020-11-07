@@ -1,5 +1,4 @@
 <?php 
-  session_start();
   require "includes/db.php";
 ?>
 
@@ -22,7 +21,7 @@
   </head>
   <body>
 
-    <!-- Page Wrap -->
+  <!-- Page Wrap -->
   <main class="page-wrap">
     <!-- Header -->
     <header id="header" class="header">
@@ -35,14 +34,22 @@
             <div class="nav__menu">
               <ul class="menu">
                 <li class="menu-item"><a href="#header">HOME</a></li>
+                <?php if( isset($_SESSION['logged_user'])) : ?>
+                  <li class="menu-item"><a style="color: #00C1DA;" href="../app/vacancy.php">VACANCY</a></li>
+                <?php endif; ?>
                 <li class="menu-item"><a href="#about-us">ABOUT US</a></li>
                 <li class="menu-item"><a href="#expertise">EXPERTISE</a></li>
                 <li class="menu-item"><a href="#our-team">OUR TEAM</a></li>
                 <li class="menu-item"><a href="#contact">CONTACT</a></li>
               </ul>
               <?php if( isset($_SESSION['logged_user'])) : ?>
-                <?php echo '<span class="logged-name"> Имя </span>' ?>
-                <input class="btn" type="button" value="logout" onclick="window.location.href = '/app/includes/logout.php'" />
+                <div class="profile-dropdown">
+                  <img src="../app/img/user.svg" width="24" height="24" alt="Profile" />
+                  <div class="hidden-block">
+                    <?php echo '<span class="logged-name">' .$_SESSION['logged_user']->surname . ' ' . $_SESSION['logged_user']->name. '</span>' ?>
+                    <input style="border-radius: 4px;" class="btn" type="button" value="logout" onclick="window.location.href = '/app/includes/logout.php'" />
+                  </div>
+                </div>
               <?php else: ?>
                 <input class="btn popup-log-open" type="button" value="sign in" />
                 <input class="btn popup-reg-open" type="button" value="sign up" />
@@ -216,11 +223,12 @@
     <div class="copy">
       <div class="container">
         <span class="copy-text">
-          © 2020 Forkee theme
+          © 2020 Forkee team.
         </span>
       </div>
     </div>
     <!-- Modals -->
+    <!-- Registration Modal -->
     <div class="popup-fade popup-reg">
       <form id="reg-form" class="popup" action="includes/reg.php" method="post">
         <a class="popup-close" href="#">&times;</a>
@@ -259,6 +267,7 @@
       </form>		
     </div>
 
+    <!-- Authorization modal -->
     <div class="popup-fade popup-log">
       <form id="log-form" class="popup v-center" action="includes/auth.php" method="post">
         <a class="popup-close" href="#">&times;</a>

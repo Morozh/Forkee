@@ -1,0 +1,72 @@
+@font-face {
+  font-family: 'roboto-grid';
+  src: url("../fonts/Roboto-Regular.ttf");
+  font-weight: 400; }
+
+@font-face {
+  font-family: 'roboto-grid';
+  src: url("../fonts/Roboto-Bold.ttf");
+  font-weight: 600; }
+
+@font-face {
+  font-family: 'roboto-grid';
+  src: url("../fonts/Roboto-Light.ttf");
+  font-weight: 200; }
+
+@font-face {
+  font-family: 'roboto-grid';
+  src: url("../fonts/Roboto-Medium.ttf");
+  font-weight: 500; }
+
+@font-face {
+  font-family: 'roboto-grid';
+  src: url("../fonts/Roboto-Black.ttf");
+  font-weight: 700; }
+
+* {
+  box-sizing: border-box; }
+  *:before, *:after {
+    box-sizing: border-box; }
+
+html, body {
+  height: 100%; }
+
+body {
+  color: #000;
+    color-font-size: 16px;
+    color-font-weight: 400;
+  min-width: 320px;
+  position: relative;
+  line-height: 1.75;
+  font-family: roboto-grid, sans-serif;
+  overflow-x: hidden;
+  opacity: 1; }
+
+.img-responsive {
+  display: block;
+  max-width: 100%;
+  height: auto; }
+
+.text-center {
+  text-align: center; }
+
+a {
+  text-decoration: none;
+  cursor: pointer; }
+
+input:focus {
+  outline: none; }
+
+input[type='search']::-webkit-search-decoration,
+input[type='search']::-webkit-search-cancel-button,
+input[type='search']::-webkit-search-results-button,
+input[type='search']::-webkit-search-results-decoration {
+  display: none; }
+
+::-webkit-input-placeholder {
+  color: rgba(60, 60, 60, 0.4); }
+  ::-webkit-input-placeholder:focus {
+    color: #000; }
+
+h1, h2, h3 {
+  margin: 0; }
