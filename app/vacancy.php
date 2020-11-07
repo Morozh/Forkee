@@ -51,6 +51,7 @@
                   <img src="../app/img/user.svg" width="24" height="24" alt="Profile" />
                   <div class="hidden-block">
                     <?php echo '<span class="logged-name">' .$_SESSION['logged_user']->surname . ' ' . $_SESSION['logged_user']->name. '</span>' ?>
+                    <input style="border-radius: 4px; box-shadow: none; font-weight: 400; margin: 10px 0;" class="btn" type="button" value="publish" onclick="window.location.href = '/app/new-vacancy.php'" />
                     <input style="border-radius: 4px; box-shadow: none; font-weight: 400;" class="btn" type="button" value="logout" onclick="window.location.href = '/app/includes/logout.php'" />
                   </div>
                 </div>

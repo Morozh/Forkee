@@ -57,6 +57,7 @@ if(empty($errors)) {
     $user->name = $data['fname'];
     $user->surname = $data['lname'];
     $user->usmail = $data['user_email'];
+    $user->organization = $data['organization'];
     //$user->status = 2;
     $user->password = password_hash($data['psword'], PASSWORD_DEFAULT);
 

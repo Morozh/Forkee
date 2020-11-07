@@ -1,5 +1,11 @@
 <?php 
   require "includes/db.php";
+
+  $host = 'localhost';
+  $user = 'root'; 
+  $password = ''; 
+  $db_name = 'forkee'; 
+  $link = mysqli_connect($host, $user, $password, $db_name);
 ?>
 
 <!doctype html>
@@ -36,6 +42,9 @@
                 <li class="menu-item"><a href="#header">HOME</a></li>
                 <?php if( isset($_SESSION['logged_user'])) : ?>
                   <li class="menu-item"><a style="color: #00C1DA;" href="../app/vacancy.php">VACANCY</a></li>
+                <?php else : ?>
+                  <input class="btn popup-log-open" type="button" value="sign in" />
+                  <input class="btn popup-reg-open" type="button" value="sign up" />
                 <?php endif; ?>
                 <li class="menu-item"><a href="#about-us">ABOUT US</a></li>
                 <li class="menu-item"><a href="#expertise">EXPERTISE</a></li>
@@ -47,7 +56,8 @@
                   <img src="../app/img/user.svg" width="24" height="24" alt="Profile" />
                   <div class="hidden-block">
                     <?php echo '<span class="logged-name">' .$_SESSION['logged_user']->surname . ' ' . $_SESSION['logged_user']->name. '</span>' ?>
-                    <input style="border-radius: 4px;" class="btn" type="button" value="logout" onclick="window.location.href = '/app/includes/logout.php'" />
+                    <input style="border-radius: 4px; box-shadow: none; font-weight: 400; margin: 10px 0;" class="btn" type="button" value="publish" onclick="window.location.href = '/app/new-vacancy.php'" />
+                    <input style="border-radius: 4px; box-shadow: none; font-weight: 400;" class="btn" type="button" value="logout" onclick="window.location.href = '/app/includes/logout.php'" />
                   </div>
                 </div>
               <?php else: ?>
@@ -262,10 +272,10 @@
             <input id="c_psword" class="form-input full-w" type="password" placeholder="Confirm Password" name="c_psword" />
           </div>
         </div>
-        <div class="row">
-          <input id="employer-sumbit" type="checkbox" class="checkbox" />
+        <!-- <div class="row">
+          <input id="employer-sumbit" type="checkbox" class="checkbox" name="organization" />
           <span class="employer-contract">Do you want to post jobs yourself?</span>
-        </div>
+        </div> -->
         <div class="row">
           <input id="reg-submit" type="submit" class="btn" value="Sign Up" name="signup" />
         </div>
