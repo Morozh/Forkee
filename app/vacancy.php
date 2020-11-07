@@ -75,7 +75,7 @@
               $result = mysqli_fetch_array($sql);
                 echo '<span style="color: #00C1DA;">'.$result[0].'</span>';
               ?>
-              jobs
+            jobs
             </span>
           </div>
           <div class="search-vac">
@@ -92,15 +92,27 @@
 
     <!-- Section Job Cards -->
     <section class="section">
-      <div class="container">
-        <div class="filters-box">
+      <div id="content-container" class="container">
+        <div id="filter" class="filters-box">
           Фильтры
         </div>
-        <div class="card-box-container">
+        <div id="content" class="card-box-container">
           <div class="card-box-item">
             <div class="card-box-row">
               <span class="card-box-row__title">Front-end developer</span>
               <span class="card-box-row__price">5000$</span>
+            </div>
+            <div class="card-box-row">
+              <span class="card-box-row__city">Perm</span>
+            </div>
+            <div class="card-box-row">
+              <p class="card-box-row__description">Development of websites of varying complexity (from a business card to an online store). 
+              Development of web services on the Laravel framework. Technical support for existing solutions.
+              Experience in PHP, JavaScript, SQL, Ajax development. Experience with Laravel or 1C-Bitrix is desirable. Experience with ...</span>
+            </div>
+            <div class="card-box-row">
+              <a class="card-box-row__respond" href="">Respond</a>
+              <span class="card-box-row__date">18 october</span>
             </div>
           </div>
           <div class="card-box-item">
@@ -108,11 +120,17 @@
               <span class="card-box-row__title">Front-end developer</span>
               <span class="card-box-row__price">5000$</span>
             </div>
-          </div>
-          <div class="card-box-item">
             <div class="card-box-row">
-              <span class="card-box-row__title">Front-end developer</span>
-              <span class="card-box-row__price">5000$</span>
+              <span class="card-box-row__city">Perm</span>
+            </div>
+            <div class="card-box-row">
+              <p class="card-box-row__description">Development of websites of varying complexity (from a business card to an online store). 
+              Development of web services on the Laravel framework. Technical support for existing solutions.
+              Experience in PHP, JavaScript, SQL, Ajax development. Experience with Laravel or 1C-Bitrix is desirable. Experience with ...</span>
+            </div>
+            <div class="card-box-row">
+              <a class="card-box-row__respond" href="">Respond</a>
+              <span class="card-box-row__date">18 october</span>
             </div>
           </div>
           <div class="card-box-item">
@@ -120,11 +138,17 @@
               <span class="card-box-row__title">Front-end developer</span>
               <span class="card-box-row__price">5000$</span>
             </div>
-          </div>
-          <div class="card-box-item">
             <div class="card-box-row">
-              <span class="card-box-row__title">Front-end developer</span>
-              <span class="card-box-row__price">5000$</span>
+              <span class="card-box-row__city">Perm</span>
+            </div>
+            <div class="card-box-row">
+              <p class="card-box-row__description">Development of websites of varying complexity (from a business card to an online store). 
+              Development of web services on the Laravel framework. Technical support for existing solutions.
+              Experience in PHP, JavaScript, SQL, Ajax development. Experience with Laravel or 1C-Bitrix is desirable. Experience with ...</span>
+            </div>
+            <div class="card-box-row">
+              <a class="card-box-row__respond" href="">Respond</a>
+              <span class="card-box-row__date">18 october</span>
             </div>
           </div>
           <div class="card-box-item">
@@ -132,17 +156,71 @@
               <span class="card-box-row__title">Front-end developer</span>
               <span class="card-box-row__price">5000$</span>
             </div>
-          </div>
-          <div class="card-box-item">
             <div class="card-box-row">
-              <span class="card-box-row__title">Front-end developer</span>
-              <span class="card-box-row__price">5000$</span>
+              <span class="card-box-row__city">Perm</span>
+            </div>
+            <div class="card-box-row">
+              <p class="card-box-row__description">Development of websites of varying complexity (from a business card to an online store). 
+              Development of web services on the Laravel framework. Technical support for existing solutions.
+              Experience in PHP, JavaScript, SQL, Ajax development. Experience with Laravel or 1C-Bitrix is desirable. Experience with ...</span>
+            </div>
+            <div class="card-box-row">
+              <a class="card-box-row__respond" href="">Respond</a>
+              <span class="card-box-row__date">18 october</span>
             </div>
           </div>
           <div class="card-box-item">
             <div class="card-box-row">
               <span class="card-box-row__title">Front-end developer</span>
               <span class="card-box-row__price">5000$</span>
+            </div>
+            <div class="card-box-row">
+              <span class="card-box-row__city">Perm</span>
+            </div>
+            <div class="card-box-row">
+              <p class="card-box-row__description">Development of websites of varying complexity (from a business card to an online store). 
+              Development of web services on the Laravel framework. Technical support for existing solutions.
+              Experience in PHP, JavaScript, SQL, Ajax development. Experience with Laravel or 1C-Bitrix is desirable. Experience with ...</span>
+            </div>
+            <div class="card-box-row">
+              <a class="card-box-row__respond" href="">Respond</a>
+              <span class="card-box-row__date">18 october</span>
+            </div>
+          </div>
+          <div class="card-box-item">
+            <div class="card-box-row">
+              <span class="card-box-row__title">Front-end developer</span>
+              <span class="card-box-row__price">5000$</span>
+            </div>
+            <div class="card-box-row">
+              <span class="card-box-row__city">Perm</span>
+            </div>
+            <div class="card-box-row">
+              <p class="card-box-row__description">Development of websites of varying complexity (from a business card to an online store). 
+              Development of web services on the Laravel framework. Technical support for existing solutions.
+              Experience in PHP, JavaScript, SQL, Ajax development. Experience with Laravel or 1C-Bitrix is desirable. Experience with ...</span>
+            </div>
+            <div class="card-box-row">
+              <a class="card-box-row__respond" href="">Respond</a>
+              <span class="card-box-row__date">18 october</span>
+            </div>
+          </div>
+          <div class="card-box-item">
+            <div class="card-box-row">
+              <span class="card-box-row__title">Front-end developer</span>
+              <span class="card-box-row__price">5000$</span>
+            </div>
+            <div class="card-box-row">
+              <span class="card-box-row__city">Perm</span>
+            </div>
+            <div class="card-box-row">
+              <p class="card-box-row__description">Development of websites of varying complexity (from a business card to an online store). 
+              Development of web services on the Laravel framework. Technical support for existing solutions.
+              Experience in PHP, JavaScript, SQL, Ajax development. Experience with Laravel or 1C-Bitrix is desirable. Experience with ...</span>
+            </div>
+            <div class="card-box-row">
+              <a class="card-box-row__respond" href="">Respond</a>
+              <span class="card-box-row__date">18 october</span>
             </div>
           </div>
         </div>
@@ -161,8 +239,6 @@
   </main>
 
     <!-- JavaScript -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.17.0/jquery.validate.js"></script>
     <script src="libs/jquery-3.5.1.min.js"></script>
     <script src="libs/slick/slick.min.js"></script>
     <script src="js/script.js"></script>

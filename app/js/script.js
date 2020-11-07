@@ -90,43 +90,22 @@ $(document).ready(function($) {
 	});
 });
 
-//Валидация регистрации
-// $(document).ready(function() {
-// 	$('#reg-form').submit(function(e) {
-// 	  e.preventDefault();
-// 	  let first_name = $('#fname').val();
-// 	  let last_name = $('#lname').val();
-// 	  let email = $('#user_email').val();
-// 	  let password = $('#psword').val();
-// 	  let c_password = $('#c_psword').val();
-   
-// 	  $(".error").removeClass('.error');
-   
-// 	  if (first_name.length < 1) {
-// 		$('#fname').addClass('error');
-// 	  }
+$(window).scroll(function () {
+	let searchHeight = $('.search-block').innerHeight();
+	let contentHeight = $('#content-container').innerHeight();
+	let filterHeight = $('.filters-box').height();
+	let filterBottomPos = contentHeight - filterHeight + 100; 
+	let trigger = $(window).scrollTop() - searchHeight;
 
-// 	  if (last_name.length < 1) {
-// 		$('#lname').addClass('error');
-// 	  }
+      	if ($(window).scrollTop() >= searchHeight + 100) {
+          	$('.filters-box').addClass('fixed');
+      	} else {
+          	$('.filters-box').removeClass('fixed');
+      	}
 
-// 	  if (email.length < 1) {
-// 		$('#user_email').addClass('error');
-// 	  } else {
-// 		let regEx = /^[A-Z0-9][A-Z0-9._%+-]{0,63}@(?:[A-Z0-9-]{1,63}.){1,125}[A-Z]{2,63}$/;
-// 		let validEmail = regEx.test(email);
-// 		if (!validEmail) {
-// 		  $('#email').addClass('error');
-// 		}
-// 	  }
-
-// 	  if (password.length < 8) {
-// 		$('#psword').addClass('error');
-// 	  }
-
-// 	  if (c_password !== password || c_password.length < 8) {
-// 		$('#c_psword').addClass('error');
-// 	  }
-
-// 	});
-// });
+      	if (trigger >= filterBottomPos) {
+          	$('.filters-box').addClass('bottom');
+      	} else {
+          	$('.filters-box').removeClass('bottom');
+      	}
+});
