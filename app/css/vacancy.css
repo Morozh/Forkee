@@ -277,6 +277,12 @@ h1, h2, h3 {
       display: flex;
       align-items: center;
       margin: 5px; }
+      .popup-fade .popup .row #employer-sumbit {
+        margin-left: 5px; }
+      .popup-fade .popup .row .employer-contract {
+        font-size: 14px;
+        font-weight: 500;
+        margin: 10px 15px; }
       .popup-fade .popup .row .col {
         display: flex;
         flex-direction: column;
@@ -345,7 +351,8 @@ h1, h2, h3 {
 .page-wrap {
   max-width: 1980px;
   width: 100%;
-  position: relative; }
+  position: relative;
+  margin: 0 auto; }
 
 .container {
   max-width: 1200px;
@@ -535,6 +542,7 @@ h1, h2, h3 {
       width: 310px;
       height: 700px;
       color: #000;
+      border: 1px solid #000;
       text-align: center;
       background-color: #F3F3F3; }
     .section .container .card-box-container {
@@ -548,14 +556,16 @@ h1, h2, h3 {
         padding: 15px;
         margin: 0 0 26px 38px;
         cursor: pointer;
-        border: .5px solid #909090; }
+        border: .5px solid #909090;
+        position: relative; }
         .section .container .card-box-container .card-box-item .card-box-row {
           display: flex;
           justify-content: space-between;
           font-size: 20px;
           font-weight: 400;
           line-height: 23px;
-          padding: 10px 25px 10px 0; }
+          padding: 10px 25px 10px 0;
+          position: relative; }
           .section .container .card-box-container .card-box-item .card-box-row__title {
             color: #00C1DA; }
           .section .container .card-box-container .card-box-item .card-box-row__city, .section .container .card-box-container .card-box-item .card-box-row__description, .section .container .card-box-container .card-box-item .card-box-row__date {
@@ -565,7 +575,11 @@ h1, h2, h3 {
             overflow: hidden;
             margin: 0;
             max-height: 42px; }
+          .section .container .card-box-container .card-box-item .card-box-row__date {
+            font-size: 14px !important; }
           .section .container .card-box-container .card-box-item .card-box-row__respond {
+            font-size: 14px;
+            font-weight: 500;
             color: #000;
             border-bottom: 1px solid #00C1DA;
             transition: .5s; }
@@ -578,5 +592,11 @@ h1, h2, h3 {
 
 .bottom {
   position: absolute !important;
-  bottom: 0 !important;
+  bottom: 25px !important;
   top: auto !important; }
+
+.p-bottom {
+  width: 100%;
+  position: absolute;
+  bottom: -15px;
+  padding-bottom: 0 !important; }

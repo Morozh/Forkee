@@ -8,6 +8,7 @@
 	max-width: 1980px
 	width: 100%
 	position: relative
+	margin: 0 auto
 
 .container 
 	max-width: 1200px
@@ -199,6 +200,7 @@
 			width: 310px
 			height: 700px
 			color: $color-black
+			border: 1px solid $color-black
 			text-align: center
 			background-color: #F3F3F3
 		.card-box-container
@@ -213,6 +215,7 @@
 				margin: 0 0 26px 38px
 				cursor: pointer
 				border: .5px solid #909090
+				position: relative
 				.card-box-row
 					display: flex
 					justify-content: space-between
@@ -220,6 +223,7 @@
 					font-weight: 400
 					line-height: 23px
 					padding: 10px 25px 10px 0
+					position: relative
 					&__title
 						color: $color-ocean-blue
 					&__city, &__description, &__date
@@ -229,7 +233,11 @@
 						overflow: hidden
 						margin: 0
 						max-height: 42px
+					&__date
+						font-size: 14px !important
 					&__respond
+						font-size: 14px
+						font-weight: 500
 						color: $color-black
 						border-bottom: 1px solid $color-ocean-blue
 						transition: .5s
@@ -242,5 +250,11 @@
 
 .bottom
 	position: absolute !important
-	bottom: 0 !important
+	bottom: 25px !important
 	top: auto !important
+
+.p-bottom
+	width: 100%
+	position: absolute
+	bottom: -15px
+	padding-bottom: 0 !important

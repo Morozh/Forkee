@@ -227,6 +227,7 @@
         </span>
       </div>
     </div>
+  
     <!-- Modals -->
     <!-- Registration Modal -->
     <div class="popup-fade popup-reg">
@@ -260,6 +261,10 @@
             <label class="form-label">Confirm Password: </label>
             <input id="c_psword" class="form-input full-w" type="password" placeholder="Confirm Password" name="c_psword" />
           </div>
+        </div>
+        <div class="row">
+          <input id="employer-sumbit" type="checkbox" class="checkbox" />
+          <span class="employer-contract">Do you want to post jobs yourself?</span>
         </div>
         <div class="row">
           <input id="reg-submit" type="submit" class="btn" value="Sign Up" name="signup" />

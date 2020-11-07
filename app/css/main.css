@@ -466,6 +466,12 @@ h1, h2, h3 {
       display: flex;
       align-items: center;
       margin: 5px; }
+      .popup-fade .popup .row #employer-sumbit {
+        margin-left: 5px; }
+      .popup-fade .popup .row .employer-contract {
+        font-size: 14px;
+        font-weight: 500;
+        margin: 10px 15px; }
       .popup-fade .popup .row .col {
         display: flex;
         flex-direction: column;
