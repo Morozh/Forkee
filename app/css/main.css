@@ -629,7 +629,9 @@ h1, h2, h3 {
           list-style-type: none;
           margin: 8px 0 0 0;
           padding: 0;
-          width: 100%; }
+          width: 100%;
+          max-height: 30vh;
+          overflow: auto; }
           .content .content-seach-input .content-search .search-select .js-dropdown-list .js-dropdown-option {
             width: 100%;
             padding: 10px 20px;
