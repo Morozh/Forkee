@@ -79,10 +79,12 @@
                 <div class="search-box" style="margin-top: 3px">
                   <a href="#" class="js-link">Choose city</a>
                   <ul class="js-dropdown-list">
-                    <li class="js-dropdown-option">Moscow</li>
-                    <li class="js-dropdown-option">Perm</li>
-                    <li class="js-dropdown-option">Ekaterinburg</li>
-                    <li class="js-dropdown-option">Artem</li>
+                    <?php 
+                      $sql = mysqli_query($link, 'SELECT * FROM `cities`');
+                      while($result = mysqli_fetch_array($sql)) {
+                        echo "<li class='js-dropdown-option'>{$result['title_city']}</li>";
+                      };
+                    ?>
                   </ul>
                 </div>
               </div>
