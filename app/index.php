@@ -42,9 +42,6 @@
                 <li class="menu-item"><a href="#header">HOME</a></li>
                 <?php if( isset($_SESSION['logged_user'])) : ?>
                   <li class="menu-item"><a style="color: #00C1DA;" href="../app/vacancy.php">VACANCY</a></li>
-                <?php else : ?>
-                  <input class="btn popup-log-open" type="button" value="sign in" />
-                  <input class="btn popup-reg-open" type="button" value="sign up" />
                 <?php endif; ?>
                 <li class="menu-item"><a href="#about-us">ABOUT US</a></li>
                 <li class="menu-item"><a href="#expertise">EXPERTISE</a></li>

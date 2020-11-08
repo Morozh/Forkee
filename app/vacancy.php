@@ -95,7 +95,46 @@
     <section class="section">
       <div id="content-container" class="container">
         <div id="filter" class="filters-box">
-          Фильтры
+          <div class="filter-row">
+            <span class="filter-row__title">Income level</span>
+            <ul class="filter-ul">
+              <li class="filter-li">from 200$</li>
+              <li class="filter-li">from 350$</li>
+              <li class="filter-li">from 450$</li>
+              <li class="filter-li">from 500$</li>
+              <li class="filter-li">from +1000$</li>
+            </ul>
+          </div>
+          <div class="filter-row">
+            <span class="filter-row__title">Region</span>
+            <ul class="filter-ul">
+              <li class="filter-li">Moscow</li>
+              <li class="filter-li">Perm Krai</li>
+              <li class="filter-li">Russia</li>
+              <li class="filter-li">And more 41</li>
+            </ul>
+          </div>
+          <div class="filter-row">
+            <span class="filter-row__title">Prof area</span>
+            <ul class="filter-ul">
+              <li class="filter-li">IT</li>
+              <li class="filter-li">Early career</li>
+              <li class="filter-li">Admin</li>
+              <li class="filter-li">And more 22</li>
+            </ul>
+          </div>
+          <div class="filter-row">
+            <span class="filter-row__title">Company industry</span>
+          </div>
+          <div class="filter-row">
+            <span class="filter-row__title">Work schedule</span>
+          </div>
+          <div class="filter-row">
+            <span class="filter-row__title">Type of employment</span>
+          </div>
+          <div class="filter-row">
+            <span class="filter-row__title">Exceptions</span>
+          </div>
         </div>
         <div id="content" class="card-box-container">
           <?php
