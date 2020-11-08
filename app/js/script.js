@@ -109,3 +109,17 @@ $(window).scroll(function () {
           	$('.filters-box').removeClass('bottom');
       	}
 });
+
+$(function() {
+	let list = $('.js-dropdown-list');
+	let link = $('.js-link');
+	link.click(function(e) {
+	  e.preventDefault();
+	  list.slideToggle(200);
+	});
+	list.find('li').click(function() {
+	  let text = $(this).html();
+	  link.html(text);
+	  list.slideToggle(200);
+	});
+  });

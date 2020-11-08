@@ -76,7 +76,15 @@
           <div class="content-seach-input">
             <div class="content-search">
               <div class="search-select">
-                Москва
+                <div class="search-box" style="margin-top: 3px">
+                  <a href="#" class="js-link">Choose city</a>
+                  <ul class="js-dropdown-list">
+                    <li class="js-dropdown-option">Moscow</li>
+                    <li class="js-dropdown-option">Perm</li>
+                    <li class="js-dropdown-option">Ekaterinburg</li>
+                    <li class="js-dropdown-option">Artem</li>
+                  </ul>
+                </div>
               </div>
               <div class="search-input">
                 <input class="search" type="search" placeholder="FIND VACANCY" />
@@ -269,10 +277,6 @@
             <input id="c_psword" class="form-input full-w" type="password" placeholder="Confirm Password" name="c_psword" />
           </div>
         </div>
-        <!-- <div class="row">
-          <input id="employer-sumbit" type="checkbox" class="checkbox" name="organization" />
-          <span class="employer-contract">Do you want to post jobs yourself?</span>
-        </div> -->
         <div class="row">
           <input id="reg-submit" type="submit" class="btn" value="Sign Up" name="signup" />
         </div>
