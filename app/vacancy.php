@@ -150,6 +150,9 @@
                   "<span class='card-box-row__city'>{$result['city']}</span>".
                 '</div>'.
                 '<div class="card-box-row">'.
+                  "<span class='card-box-row__phone'>Phone: + {$result['phone_number']} </span>".
+                '</div>'.
+                '<div class="card-box-row">'.
                   "<p class='card-box-row__description'>{$result['description']}</p>".
                 '</div>'.
                 '<div class="card-box-row p-bottom">'.

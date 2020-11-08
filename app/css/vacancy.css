@@ -603,7 +603,7 @@ h1, h2, h3 {
           font-size: 20px;
           font-weight: 400;
           line-height: 23px;
-          padding: 10px 25px 10px 0;
+          padding: 5px 25px 5px 0;
           position: relative; }
           .section .container .card-box-container .card-box-item .card-box-row__title {
             color: #00C1DA; }
@@ -616,6 +616,9 @@ h1, h2, h3 {
             max-height: 42px; }
           .section .container .card-box-container .card-box-item .card-box-row__date {
             font-size: 14px !important; }
+          .section .container .card-box-container .card-box-item .card-box-row__phone {
+            font-size: 12px !important;
+            color: #909090 !important; }
           .section .container .card-box-container .card-box-item .card-box-row__respond {
             font-size: 14px;
             font-weight: 500;
