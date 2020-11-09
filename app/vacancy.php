@@ -138,7 +138,7 @@
         </div>
         <div id="content" class="card-box-container">
           <?php
-            $sql = mysqli_query($link, 'SELECT * FROM `vacancies`');
+            $sql = mysqli_query($link, 'SELECT va.title_vacancy, va.salary, en.title, ci.title_city, va.remote_work, va.phone_number, va.description, va.date FROM vacancies va, enterprises en, cities ci WHERE va.enterprise = en.id_enterprise and va.city = ci.id_city and active is true');
             while ($result = mysqli_fetch_array($sql)) {
               echo 
               '<div class="card-box-item">'.
@@ -147,7 +147,10 @@
                   "<span class='card-box-row__price'>{$result['salary']}$</span>".
                 '</div>'.
                 '<div class="card-box-row">'.
-                  "<span class='card-box-row__city'>{$result['city']}</span>".
+                  "<span class='card-box-row__phone'>Organization: {$result['title']}</span>".
+                '</div>'.
+                '<div class="card-box-row">'.
+                  "<span class='card-box-row__city'>City: {$result['title_city']}</span>".
                 '</div>'.
                 '<div class="card-box-row">'.
                   "<span class='card-box-row__phone'>Phone: + {$result['phone_number']} </span>".
@@ -155,10 +158,10 @@
                 '<div class="card-box-row">'.
                   "<p class='card-box-row__description'>{$result['description']}</p>".
                 '</div>'.
-                '<div class="card-box-row p-bottom">'.
-                  '<a class="card-box-row__respond" href="">Respond</a>'.
-                  "<span class='card-box-row__date'>{$result['date']}</span>".
-                '</div>'.
+                "<div class='p-bottom'>
+                  <a class='card-box-row__respond' href=''>Respond</a>
+                  <span class='card-box-row__date'>{$result['date']}</span>
+                </div>".
               '</div>';
             }
           ?>
