@@ -3,7 +3,7 @@
 
   $host = 'localhost';
   $user = 'root'; 
-  $password = ''; 
+  $password = 'root'; //index.php 6 string, db.php 4 string
   $db_name = 'forkee'; 
   $link = mysqli_connect($host, $user, $password, $db_name);
 ?>
@@ -41,10 +41,10 @@
               <ul class="menu">
                 <li class="menu-item"><a href="../app/index.php">HOME</a></li>
                 <li class="menu-item"><a style="color: #00C1DA;" href="../app/vacancy.php">VACANCY</a></li>
-                <li class="menu-item"><a href="#about-us">ABOUT US</a></li>
-                <li class="menu-item"><a href="#expertise">EXPERTISE</a></li>
-                <li class="menu-item"><a href="#our-team">OUR TEAM</a></li>
-                <li class="menu-item"><a href="#contact">CONTACT</a></li>
+                <li class="menu-item"><a href="../app/index.php#about-us">ABOUT US</a></li>
+                <li class="menu-item"><a href="../app/index.php#expertise">EXPERTISE</a></li>
+                <li class="menu-item"><a href="../app/index.php#our-team">OUR TEAM</a></li>
+                <li class="menu-item"><a href="../app/index.php#contact">CONTACT</a></li>
               </ul>
               <?php if( isset($_SESSION['logged_user'])) : ?>
                 <div class="profile-dropdown">
