@@ -3,7 +3,7 @@
 
   $host = 'localhost';
   $user = 'root'; 
-  $password = 'root'; //index.php 6 string, db.php 4 string
+  $password = ''; //index.php 6 string, db.php 4 string
   $db_name = 'forkee'; 
   $link = mysqli_connect($host, $user, $password, $db_name);
 ?>
@@ -85,7 +85,7 @@
           <form method = "get" action ="main_search.php"> 
             <div class="search-vac">
               <div class="search-vac__input">
-                <input class="v-input" type="search" placeholder="Profession, position or vacancy" name ="search"/>
+                <input class="v-input" type="search" placeholder="Profession, position or vacancy" name="search" value="<?php echo $_GET['search']?> "/>
               </div>
               <div class="search-vac__btn">
                 <input class="v-btn" type="submit" value="SEARCH" />

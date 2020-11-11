@@ -3,7 +3,7 @@
 
   $host = 'localhost';
   $user = 'root'; 
-  $password = 'root'; //vacancy.php 6 string, db.php 4 string
+  $password = ''; //vacancy.php 6 string, db.php 4 string
   $db_name = 'forkee'; 
   $link = mysqli_connect($host, $user, $password, $db_name);
 ?>
@@ -15,7 +15,7 @@
     <title>Поиск</title>
 </head>
 <body>
-    <form method = "get" action ="test_search.php">
+    <form method="get" action="test_search.php">
         <input type="search" name="search" placeholder="search..">
         <input type="submit" name="subBtn" value="search">
     </form>

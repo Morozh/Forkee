@@ -3,7 +3,7 @@
 
   $host = 'localhost';
   $user = 'root'; 
-  $password = 'root'; //index.php 6 string, db.php 4 string
+  $password = ''; //index.php 6 string, db.php 4 string
   $db_name = 'forkee'; 
   $link = mysqli_connect($host, $user, $password, $db_name);
 ?>
