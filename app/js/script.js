@@ -121,5 +121,8 @@ $(function() {
 	  let text = $(this).html();
 	  link.html(text);
 	  list.slideToggle(200);
+	  $('input[name="city"]').val(text);
 	});
   });
+
+  

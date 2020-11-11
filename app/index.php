@@ -3,7 +3,7 @@
 
   $host = 'localhost';
   $user = 'root'; 
-  $password = ''; //vacancy.php 6 string, db.php 4 string
+  $password = 'root'; //vacancy.php 6 string, db.php 4 string
   $db_name = 'forkee'; 
   $link = mysqli_connect($host, $user, $password, $db_name);
 ?>
@@ -89,6 +89,7 @@
                     </ul>
                   </div>
                 </div>
+                <input type="hidden" name="city" />
                 <div class="search-input">
                   <input class="search" type="search" placeholder="FIND VACANCY" name="search" />
                 </div>
@@ -96,6 +97,9 @@
               <input class="btn" type="submit" value="search"  />
             </div>
           </form>
+          <?php 
+          
+          ?>
         </div>
       </div>
     </header>
