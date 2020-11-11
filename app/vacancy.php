@@ -2,7 +2,7 @@
   require "includes/db.php";
   $host = 'localhost';
   $user = 'root'; 
-  $password = 'root';
+  $password = '';
   $db_name = 'forkee'; 
   $link = mysqli_connect($host, $user, $password, $db_name);
 ?>
