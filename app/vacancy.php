@@ -85,7 +85,7 @@
           <form method = "get" action ="vacancy.php"> 
             <div class="search-vac">
               <div class="search-vac__input">
-                <input class="v-input" type="search" placeholder="Profession, position or vacancy" name="search" value="<?php echo $_GET['search']?> "/>
+                <input class="v-input" type="search" placeholder="Profession, position or vacancy" name="search" value="<?php echo $_GET['search']?>" />
               </div>
               <div class="search-vac__btn">
                 <input class="v-btn" type="submit" value="SEARCH" />
