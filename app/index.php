@@ -73,27 +73,29 @@
           <span class="content-subtitle">
             EASY TO FIND JOB
           </span>
-          <div class="content-seach-input">
-            <div class="content-search">
-              <div class="search-select">
-                <div class="search-box" style="margin-top: 3px">
-                  <a href="#" class="js-link">Choose city</a>
-                  <ul class="js-dropdown-list">
-                    <?php 
-                      $sql = mysqli_query($link, 'SELECT * FROM `cities`');
-                      while($result = mysqli_fetch_array($sql)) {
-                        echo "<li class='js-dropdown-option'>{$result['title_city']}</li>";
-                      };
-                    ?>
-                  </ul>
+          <form method="get" action="vacancy.php">
+            <div class="content-seach-input">
+              <div class="content-search">
+                <div class="search-select">
+                  <div class="search-box" style="margin-top: 3px">
+                    <a href="#" class="js-link">Choose city</a>
+                    <ul class="js-dropdown-list">
+                      <?php 
+                        $sql = mysqli_query($link, 'SELECT * FROM `cities`');
+                        while($result = mysqli_fetch_array($sql)) {
+                          echo "<li class='js-dropdown-option'>{$result['title_city']}</li>";
+                        };
+                      ?>
+                    </ul>
+                  </div>
+                </div>
+                <div class="search-input">
+                  <input class="search" type="search" placeholder="FIND VACANCY" name="search" />
                 </div>
               </div>
-              <div class="search-input">
-                <input class="search" type="search" placeholder="FIND VACANCY" />
-              </div>
+              <input class="btn" type="submit" value="search"  />
             </div>
-            <input class="btn" type="button" value="search"  />
-          </div>
+          </form>
         </div>
       </div>
     </header>
