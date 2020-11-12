@@ -331,13 +331,13 @@
         <div class="row">
           <div class="col">
             <label class="form-label">City: </label>
-            <input id="c_psword" class="form-input full-w" type="text placeholder="Choose city" name="city" />
+            <input id="city_p" class="form-input full-w" type="text" placeholder="Choose city" name="city_publish" />
           </div>
         </div>
         <div class="row">
           <div class="col">
             <label class="form-label">Phone: </label>
-            <input id="psword" class="form-input full-w" type="text" placeholder="Enter your phone +7" name="phone"/>
+            <input id="phone" class="form-input full-w" type="text" placeholder="Enter your phone +7" name="phone"/>
           </div>
         </div>
         <div class="row">
