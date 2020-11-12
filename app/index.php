@@ -325,7 +325,7 @@
         <div class="row">
           <div class="col">
             <label class="form-label">Enterprise: </label>
-            <input id="enterprise" class="form-input full-w" type="text" placeholder="Enter your company name" name="enterprise />
+            <input id="enterprise" class="form-input full-w" type="text" placeholder="Enter your company name" name="enterprise" />
           </div>
         </div>
         <div class="row">
