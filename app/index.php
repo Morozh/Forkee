@@ -319,31 +319,31 @@
         <div class="row">
           <div class="col">
             <label class="form-label">Vacancy title: </label>
-            <input id="user_email" class="form-input full-w" type="email" placeholder="Enter vacancy title" name = "user_email"/>
+            <input id="vactitle" class="form-input full-w" type="email" placeholder="Enter vacancy title" name = "vactitle"/>
           </div>
         </div>
         <div class="row">
           <div class="col">
             <label class="form-label">Enterprise: </label>
-            <input id="psword" class="form-input full-w" type="password" placeholder="Enter your company name" name="psword" />
+            <input id="enterprise" class="form-input full-w" type="text" placeholder="Enter your company name" name="enterprise />
           </div>
         </div>
         <div class="row">
           <div class="col">
             <label class="form-label">City: </label>
-            <input id="c_psword" class="form-input full-w" type="password" placeholder="Choose city" name="c_psword" />
+            <input id="c_psword" class="form-input full-w" type="text placeholder="Choose city" name="city" />
           </div>
         </div>
         <div class="row">
           <div class="col">
             <label class="form-label">Phone: </label>
-            <input id="psword" class="form-input full-w" type="password" placeholder="Enter your phone +7" name="psword"/>
+            <input id="psword" class="form-input full-w" type="text" placeholder="Enter your phone +7" name="phone"/>
           </div>
         </div>
         <div class="row">
           <div class="col">
             <label class="form-label">Description: </label>
-            <textarea id="text" class="text-description" type="password" placeholder="Vacancy description" name="psword" ></textarea>
+            <textarea id="description" class="text-description" placeholder="Vacancy description" name="description"></textarea>
           </div>
         </div>
         <div class="row">
