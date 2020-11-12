@@ -313,43 +313,37 @@
 
     <!-- Publish new vacancy -->
     <div class="popup-fade popup-pub">
-      <form id="reg-form" class="popup" action="" method="post" style="top: 0;">
+      <form id="reg-form" class="popup" action="" method="post" style="top: 0 !important;">
         <a class="popup-close" href="#">&times;</a>
         <h2 class="form-title">Publish your vacancy</h2>
         <div class="row">
           <div class="col">
-            <label class="form-label">Email: </label>
-            <input id="user_email" class="form-input full-w" type="email" placeholder="Email" name = "user_email"/>
+            <label class="form-label">Vacancy title: </label>
+            <input id="user_email" class="form-input full-w" type="email" placeholder="Enter vacancy title" name = "user_email"/>
           </div>
         </div>
         <div class="row">
           <div class="col">
-            <label class="form-label">Password: </label>
-            <input id="psword" class="form-input full-w" type="password" placeholder="Password" name="psword" />
+            <label class="form-label">Enterprise: </label>
+            <input id="psword" class="form-input full-w" type="password" placeholder="Enter your company name" name="psword" />
           </div>
         </div>
         <div class="row">
           <div class="col">
-            <label class="form-label">Confirm Password: </label>
-            <input id="c_psword" class="form-input full-w" type="password" placeholder="Confirm Password" name="c_psword" />
+            <label class="form-label">City: </label>
+            <input id="c_psword" class="form-input full-w" type="password" placeholder="Choose city" name="c_psword" />
           </div>
         </div>
         <div class="row">
           <div class="col">
-            <label class="form-label">Password: </label>
-            <input id="psword" class="form-input full-w" type="password" placeholder="Password" name="psword"/>
+            <label class="form-label">Phone: </label>
+            <input id="psword" class="form-input full-w" type="password" placeholder="Enter your phone +7" name="psword"/>
           </div>
         </div>
         <div class="row">
           <div class="col">
-            <label class="form-label">Password: </label>
-            <input id="psword" class="form-input full-w" type="password" placeholder="Password" name="psword"/>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col">
-            <label class="form-label">Password: </label>
-            <input id="psword" class="form-input full-w" type="password" placeholder="Password" name="psword"/>
+            <label class="form-label">Description: </label>
+            <textarea id="text" class="text-description" type="password" placeholder="Vacancy description" name="psword" ></textarea>
           </div>
         </div>
         <div class="row">
