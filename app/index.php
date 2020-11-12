@@ -53,7 +53,7 @@
                   <img src="../app/img/user.svg" width="24" height="24" alt="Profile" />
                   <div class="hidden-block">
                     <?php echo '<span class="logged-name">' .$_SESSION['logged_user']->surname . ' ' . $_SESSION['logged_user']->name. '</span>' ?>
-                    <input style="border-radius: 4px; box-shadow: none; font-weight: 400; margin: 10px 0;" class="btn" type="button" value="publish" onclick="window.location.href = '/app/new-vacancy.php'" />
+                    <input style="border-radius: 4px; box-shadow: none; font-weight: 400; margin: 10px 0;" class="btn popup-pub-open" type="button" value="publish" />
                     <input style="border-radius: 4px; box-shadow: none; font-weight: 400;" class="btn" type="button" value="logout" onclick="window.location.href = '/app/includes/logout.php'" />
                   </div>
                 </div>
@@ -97,9 +97,6 @@
               <input class="btn" type="submit" value="search"  />
             </div>
           </form>
-          <?php 
-          
-          ?>
         </div>
       </div>
     </header>
@@ -310,6 +307,53 @@
         </div>
         <div class="row">
           <input id="reg-submit" type="submit" class="btn" value="Sign In"  name="signin"/>
+        </div>
+      </form>		
+    </div>
+
+    <!-- Publish new vacancy -->
+    <div class="popup-fade popup-pub">
+      <form id="reg-form" class="popup" action="" method="post" style="top: 0;">
+        <a class="popup-close" href="#">&times;</a>
+        <h2 class="form-title">Publish your vacancy</h2>
+        <div class="row">
+          <div class="col">
+            <label class="form-label">Email: </label>
+            <input id="user_email" class="form-input full-w" type="email" placeholder="Email" name = "user_email"/>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col">
+            <label class="form-label">Password: </label>
+            <input id="psword" class="form-input full-w" type="password" placeholder="Password" name="psword" />
+          </div>
+        </div>
+        <div class="row">
+          <div class="col">
+            <label class="form-label">Confirm Password: </label>
+            <input id="c_psword" class="form-input full-w" type="password" placeholder="Confirm Password" name="c_psword" />
+          </div>
+        </div>
+        <div class="row">
+          <div class="col">
+            <label class="form-label">Password: </label>
+            <input id="psword" class="form-input full-w" type="password" placeholder="Password" name="psword"/>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col">
+            <label class="form-label">Password: </label>
+            <input id="psword" class="form-input full-w" type="password" placeholder="Password" name="psword"/>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col">
+            <label class="form-label">Password: </label>
+            <input id="psword" class="form-input full-w" type="password" placeholder="Password" name="psword"/>
+          </div>
+        </div>
+        <div class="row">
+          <input id="reg-submit" type="submit" class="btn" value="Publish" name="publish" />
         </div>
       </form>		
     </div>

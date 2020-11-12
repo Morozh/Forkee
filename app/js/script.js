@@ -90,6 +90,32 @@ $(document).ready(function($) {
 	});
 });
 
+// Модальное окно публикации
+$(document).ready(function($) {
+	$('.popup-pub-open').click(function() {
+		$('.popup-pub').fadeIn();
+		return false;
+	});	
+	
+	$('.popup-close').click(function() {
+		$(this).parents('.popup-pub').fadeOut();
+		return false;
+	});		
+ 
+	$(document).keydown(function(e) {
+		if (e.keyCode === 27) {
+			e.stopPropagation();
+			$('.popup-pub').fadeOut();
+		}
+	});
+	
+	$('.popup-pub').click(function(e) {
+		if ($(e.target).closest('.popup').length == 0) {
+			$(this).fadeOut();					
+		}
+	});
+});
+
 $(window).scroll(function () {
 	let searchHeight = $('.search-block').innerHeight();
 	let contentHeight = $('#content-container').innerHeight();
