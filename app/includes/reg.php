@@ -64,7 +64,8 @@ if(empty($errors)) {
     R::store($user);
     echo '<div style="color: green; ">Вы успешно зарегистрированы! Можно <a href="/app">авторизоваться</a>.</div><hr>';
 } else {
-    echo '<div style="color: red; ">' . array_shift($errors). '</div>';
+    echo '<div style="color: red; ">' . array_shift($errors). '</div>
+    <a href="../index.php">Вернуться на главную</a>';
 }
 
 }

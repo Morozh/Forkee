@@ -21,7 +21,8 @@
         }
 
         if(!empty($errors)) {
-            echo '<div style="color: red; ">' . array_shift($errors). '</div><hr>';
+            echo '<div style="color: red; ">' . array_shift($errors). '</div>
+            <a href="../index.php">Вернуться на главную</a>';
         }
 
     }
