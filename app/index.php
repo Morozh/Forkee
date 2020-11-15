@@ -53,7 +53,6 @@
                   <img src="../app/img/user.svg" width="24" height="24" alt="Profile" />
                   <div class="hidden-block">
                     <?php echo '<span class="logged-name">' .$_SESSION['logged_user']->surname . ' ' . $_SESSION['logged_user']->name. '</span>' ?>
-                    <input style="border-radius: 4px; box-shadow: none; font-weight: 400; margin: 10px 0;" class="btn popup-pub-open" type="button" value="publish" />
                     <input style="border-radius: 4px; box-shadow: none; font-weight: 400;" class="btn" type="button" value="logout" onclick="window.location.href = '/app/includes/logout.php'" />
                   </div>
                 </div>
@@ -307,47 +306,6 @@
         </div>
         <div class="row">
           <input id="reg-submit" type="submit" class="btn" value="Sign In"  name="signin"/>
-        </div>
-      </form>		
-    </div>
-
-    <!-- Publish new vacancy -->
-    <div class="popup-fade popup-pub">
-      <form id="reg-form" class="popup" action="" method="post" style="top: 0 !important;">
-        <a class="popup-close" href="#">&times;</a>
-        <h2 class="form-title">Publish your vacancy</h2>
-        <div class="row">
-          <div class="col">
-            <label class="form-label">Vacancy title: </label>
-            <input id="vactitle" class="form-input full-w" type="email" placeholder="Enter vacancy title" name = "vactitle"/>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col">
-            <label class="form-label">Enterprise: </label>
-            <input id="enterprise" class="form-input full-w" type="text" placeholder="Enter your company name" name="enterprise" />
-          </div>
-        </div>
-        <div class="row">
-          <div class="col">
-            <label class="form-label">City: </label>
-            <input id="city_p" class="form-input full-w" type="text" placeholder="Choose city" name="city_publish" />
-          </div>
-        </div>
-        <div class="row">
-          <div class="col">
-            <label class="form-label">Phone: </label>
-            <input id="phone" class="form-input full-w" type="text" placeholder="Enter your phone +7" name="phone"/>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col">
-            <label class="form-label">Description: </label>
-            <textarea id="description" class="text-description" placeholder="Vacancy description" name="description"></textarea>
-          </div>
-        </div>
-        <div class="row">
-          <input id="reg-submit" type="submit" class="btn" value="Publish" name="publish" />
         </div>
       </form>		
     </div>
