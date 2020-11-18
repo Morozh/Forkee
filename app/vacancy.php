@@ -54,8 +54,8 @@
                   </div>
                 </div>
               <?php else: ?>
-                <input class="btn popup-log-open" type="button" value="sign in" />
-                <input class="btn popup-reg-open" type="button" value="sign up" />
+                <!-- <input class="btn popup-log-open" type="button" value="sign in" />
+                <input class="btn popup-reg-open" type="button" value="sign up" /> -->
               <?php endif; ?>
             </div>
           </nav>
